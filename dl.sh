@@ -92,11 +92,8 @@ cat > $video_dir/$name.html << EOF
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相《伪火》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/blog/425event.html"><b>“四‧二五”中南海万人上访始末</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10000/videos/res/organs.html"><b>中共摘取活体器官（基于国内新闻报导和采访，无可辩驳！）</b></a>&nbsp;&nbsp;
-<br/><br/>
-<a href="http://$ip:10000/videos/res/DeathByChina.html"><b>中美贸易战“剧本” -《致命中国：美国如何失去制造业基础》</b></a>&nbsp;&nbsp;
-<br/><br/>
-<a href="http://$ip:10000/videos/res/pence.html"><b>“伐共宣言”- 美国副总统彭斯在哈德逊研究所演讲</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/res/Organs"><b>中共摘取活体器官</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/res/TradeWar"><b>中美贸易战专题</b></a>&nbsp;&nbsp;
 <br/><br/>
 </p>
 </center>
