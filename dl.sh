@@ -113,3 +113,12 @@ sed -i "3 a$vlinks" $md_page
 sed -i "3 a$plinks" $md_page
 
 
+## clean up
+cd $video_dir
+dated=$(ls -t link-* | sed -n '1000,$p')
+for f in $dated; do
+	echo "removing $f ..."
+	rm $f
+done
+
+
