@@ -63,7 +63,7 @@ cat > $video_dir/$name.html << EOF
 <style>
 #player {
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 0px;
 	width: 100%;
 	max-width: 640px;
 }
@@ -93,6 +93,7 @@ cat > $video_dir/$name.html << EOF
 <a href="http://$ip:10000/videos/blog/425event.html"><b>“四‧二五”中南海万人上访始末</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/res/Organs"><b>中共摘取活体器官</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/709"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/res/TradeWar"><b>中美贸易战专题</b></a>&nbsp;&nbsp;
 <br/><br/>
 </p>
