@@ -46,7 +46,7 @@ EOF
 ls -t *.mp4 | grep -v ^link- > list.txt
 
 while read v; do
-	vid=$(echo $v | rev | cut -c5-15)
+	vid=$(echo $v | rev | cut -c5-15 | rev)
 	name="link-$vid-$ts.mp4"
 	title=$(echo $v | rev | cut -c17- | rev | sed 's/法轮功/法.轮.功/g' | sed 's/退/.退./g' | sed 's/党/.党/g' | sed 's/摘/.摘/g' ) 
 	
