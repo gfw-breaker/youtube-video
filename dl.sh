@@ -79,22 +79,23 @@ cat > $video_dir/$name.html << EOF
 <a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b> 一键翻墙软件</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker?tab=repositories" target="_blank"><b>免翻墙资源</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10080/gb/8/11/24/n2339512.htm"><b>文昭：生活在希望中，做快乐的中国人</b></a>
-<br/><br/>
-<a href="http://$ip:10000/videos/blog/tuid.html"><b>三退大潮席卷全球 三亿人觉醒见证中共末日</b></a>
+<a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相《伪火》</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/blog/425event.html"><b>“四‧二五”中南海万人上访始末</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/jiuping/index.html"><b>《九评共产党》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/mtdwh/index.html"><b>《漫谈党文化》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000/xtr/gb/prog99.html"><b>《热点互动直播》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000/xtr/gb/prog109.html"><b>《大陆新闻解读》</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相《伪火》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/blog/425event.html"><b>“四‧二五”中南海万人上访始末</b></a>&nbsp;&nbsp;
-<br/><br/>
 <a href="http://$ip:10000/videos/res/Organs"><b>中共摘取活体器官</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/709"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/res/TradeWar"><b>中美贸易战专题</b></a>&nbsp;&nbsp;
+<br/><br/>
+<a href="http://$ip:10080/gb/8/11/24/n2339512.htm"><b>文昭：生活在希望中，做快乐的中国人</b></a>
+<br/><br/>
+<a href="http://$ip:10000/videos/blog/tuid.html"><b>三退大潮席卷全球 三亿人觉醒见证中共末日</b></a>
 <br/><br/>
 </p>
 </center>
