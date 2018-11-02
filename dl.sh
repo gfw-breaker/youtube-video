@@ -50,7 +50,7 @@ while read v; do
 	name="link.$vid.$ts.mp4"
 	title=$(echo $v | rev | cut -c17- | rev | sed 's/法轮功/法.轮.功/g' | sed 's/退/.退./g' | sed 's/党/.党/g' | sed 's/摘/.摘/g' ) 
 	
-	ln -s "$v" "link-$vid-$ts.mp4" > /dev/null 2>&1
+	ln -s "$v" "$name" > /dev/null 2>&1
 	echo "<a href='http://$ip/$folder/$name.html'><b>$title</b></a></br></br>" >> $index_page
 	echo "##### <a href='http://$ip/$folder/$name.html'>$title</a>" >> $md_page
 
