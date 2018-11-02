@@ -28,7 +28,7 @@ youtube-dl -f 18 \
 	--playlist-end 200 \
 	-i $youtube_url
 
-if [ ! $stick ]; then
+if [ $stick ]; then
 	youtube-dl -f 18 -i "https://www.youtube.com/watch?v=$stick"
 	touch *$stick*
 fi
