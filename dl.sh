@@ -3,7 +3,7 @@
 
 video_count=50
 
-if [ $# -lt 3 ]; then
+if [ $# -lt 2 ]; then
 	echo "please specify folder and url. exiting ..."
 	exit 1
 fi
