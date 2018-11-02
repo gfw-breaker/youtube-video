@@ -1,6 +1,8 @@
 #!/bin/bash
 # author: gfw-breaker
 
+video_count=50
+
 if [ $# -ne 2 ]; then
 	echo "please specify folder and url. exiting ..."
 	exit 1
