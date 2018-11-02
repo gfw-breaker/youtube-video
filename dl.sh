@@ -43,7 +43,7 @@ cat > $index_page << EOF
 <body>
 EOF
 
-ls -t *.mp4 | grep -v ^link- > list.txt
+ls -t *.mp4 | grep -v ^link > list.txt
 
 while read v; do
 	vid=$(echo $v | rev | cut -c5-15 | rev)
@@ -115,7 +115,7 @@ sed -i "3 a$plinks" $md_page
 
 ## clean up
 cd $video_dir
-dated=$(ls -t link-* | sed -n '1000,$p')
+dated=$(ls -t link* | sed -n '1000,$p')
 for f in $dated; do
 	echo "removing $f ..."
 	rm $f
