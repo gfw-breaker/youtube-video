@@ -3,13 +3,14 @@
 
 video_count=50
 
-if [ $# -ne 2 ]; then
+if [ $# -lt 3 ]; then
 	echo "please specify folder and url. exiting ..."
 	exit 1
 fi
 
 folder=$1
 youtube_url=$2
+stick=$3
 
 video_dir=/usr/share/nginx/html/$folder
 index_page=$video_dir/index.html
@@ -27,6 +28,10 @@ youtube-dl -f 18 \
 	--playlist-end 200 \
 	-i $youtube_url
 
+if [ ! $stick ]; then
+	youtube-dl -f 18 -i "https://www.youtube.com/watch?v=$stick"
+	touch *$stick*
+fi
 
 # generate page
 echo > $md_page
