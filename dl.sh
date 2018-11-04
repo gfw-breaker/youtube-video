@@ -76,13 +76,18 @@ cat > $video_dir/$name.html << EOF
 	<source src="$name" type="video/mp4">
 </video>
 <p>
-<a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b> 一键翻墙软件</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b>翻墙软件</b></a>&nbsp;&nbsp;
+<a href="http://$ip" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
-<a href="https://github.com/gfw-breaker?tab=repositories" target="_blank"><b>免翻墙资源</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相《伪火》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/blog/425event.html"><b>“四‧二五”中南海万人上访始末</b></a>&nbsp;&nbsp;
+<br/><br/>
+<a href="https://github.com/gfw-breaker/wenzhao/blob/master/README.md"><b>《文昭谈古论今》</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker/ntdtv-comedy/blob/master/README.md"><b>《时事小品》</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker/ntdtv-news/blob/master/README.md"><b>《新唐人中国禁闻》</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker/today-in-history/blob/master/README.md"><b>《历史上的今天》</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/jiuping/index.html"><b>《九评共产党》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/mtdwh/index.html"><b>《漫谈党文化》</b></a>&nbsp;&nbsp;
