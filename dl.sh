@@ -129,4 +129,10 @@ for f in $dated; do
 	rm $f
 done
 
+# keep latest 80 video files
+ls -t *mp4 | grep -v ^link | sed -n '80,$p' > deleted.txt
+while read v ; do
+	echo "removing $v ..."
+	rm "$v"
+done < deleted.txt
 
