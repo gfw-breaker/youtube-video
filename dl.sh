@@ -89,10 +89,10 @@ cat > $video_dir/$name.html << EOF
 <a href="https://github.com/gfw-breaker/ntdtv-news/blob/master/README.md"><b>《新唐人中国禁闻》</b></a>&nbsp;&nbsp;
 <a href="https://github.com/gfw-breaker/today-in-history/blob/master/README.md"><b>《历史上的今天》</b></a>&nbsp;&nbsp;
 <br/><br/>
+<a href="http://$ip:10000/videos/legend/index.html"><b>《传奇时代》</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/fytdx/index.html"><b>《风雨天地行》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/jiuping/index.html"><b>《九评共产党》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/mtdwh/index.html"><b>《漫谈党文化》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:8000/xtr/gb/prog99.html"><b>《热点互动直播》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:8000/xtr/gb/prog109.html"><b>《大陆新闻解读》</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/res/Organs"><b>中共摘取活体器官</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/709"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
