@@ -124,8 +124,7 @@ echo "</body></html>" >> $index_page
 
 # commit
 plinks="##### 反向代理： [新唐人直播](http://$ip) &nbsp;|&nbsp; [Google](http://$ip:8888/search?q=425事件) &nbsp;|&nbsp; [维基百科](http://$ip:8100/wiki/喬高-麥塔斯調查報告) &nbsp;|&nbsp; [大纪元新闻网](http://$ip:10080) &nbsp;|&nbsp; [新唐人电视台](http://$ip:8000) &nbsp;|&nbsp; [神韵艺术团](http://$ip:8000/xtr/gb/prog673.html) &nbsp;|&nbsp; [我的博客](http://$ip:10000/)"
-vlinks="##### 精彩视频： [《传奇时代》](http://$ip:10000/videos/legend/) | [《风雨天地行》](http://$ip:10000/videos/fytdx/) | [《九评共产党》](http://$ip:10000/videos/jiuping/) | [《漫谈党
-文化》](http://$ip:10000/videos/mtdwh/) | [《百年红祸》](http://$ip:10000/videos/bnhh) |&nbsp; [709维权律师](http://$ip:10000/videos/709/)"
+vlinks="##### 精彩视频： [《传奇时代》](http://$ip:10000/videos/legend/) | [《风雨天地行》](http://$ip:10000/videos/fytdx/) | [《九评共产党》](http://$ip:10000/videos/jiuping/) | [《漫谈党文化》](http://$ip:10000/videos/mtdwh/) | [《百年红祸》](http://$ip:10000/videos/bnhh) |&nbsp; [709维权律师](http://$ip:10000/videos/709/)"
 
 sed -i "3 a$vlinks" $md_page
 sed -i "3 a$plinks" $md_page
