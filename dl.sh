@@ -132,10 +132,11 @@ sed -i "3 a$plinks" $md_page
 
 ## clean up
 cd $video_dir
-dated=$(ls -t link* | sed -n '4000,$p')
+dated=$(ls -t link*mp4 | sed -n '2000,$p')
 for f in $dated; do
 	echo "removing $f ..."
 	rm $f
+	rm $f.html
 done
 
 
