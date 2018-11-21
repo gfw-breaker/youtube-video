@@ -23,8 +23,8 @@ ts=$(date '+%m%d%H')
 # download videos
 mkdir -p $video_dir
 cd $video_dir
-#youtube-dl -f 133+140 \
-youtube-dl -f 18 \
+#youtube-dl -f 18 \
+youtube-dl -f 133+140 \
 	--max-downloads $video_count \
 	--playlist-end 200 \
 	-i $youtube_url
