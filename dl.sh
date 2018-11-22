@@ -90,14 +90,16 @@ cat > $video_dir/$name.html << EOF
 <a href="http://$ip" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
+<a href="https://github.com/oGate2/oGate/blob/master/README.md" target="_blank"><b>网门</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相《伪火》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/blog/425event.html"><b>“四‧二五”中南海万人上访始末</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/blog/425event.html"><b>中南海万人上访始末</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/blog/report.html"><b>官媒正面报导法轮功</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="https://github.com/gfw-breaker/wenzhao/blob/master/README.md"><b>《文昭谈古论今》</b></a>&nbsp;&nbsp;
-<a href="https://github.com/gfw-breaker/ntdtv-comedy/blob/master/README.md"><b>《时事小品》</b></a>&nbsp;&nbsp;
-<a href="https://github.com/gfw-breaker/ntdtv-news/blob/master/README.md"><b>《新唐人中国禁闻》</b></a>&nbsp;&nbsp;
-<a href="https://github.com/gfw-breaker/today-in-history/blob/master/README.md"><b>《历史上的今天》</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker/wenzhao/blob/master/README.md"><b>《文昭谈古论今》</b></a>&nbsp;
+<a href="https://github.com/gfw-breaker/ntdtv-comedy/blob/master/README.md"><b>《时事小品》</b></a>&nbsp;
+<a href="https://github.com/gfw-breaker/ntdtv-news/blob/master/README.md"><b>《新唐人中国禁闻》</b></a>&nbsp;
+<a href="https://github.com/gfw-breaker/today-in-history/blob/master/README.md"><b>《历史上的今天》</b></a>&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/legend/index.html"><b>《传奇时代》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/fytdx/index.html"><b>《风雨天地行》</b></a>&nbsp;&nbsp;
@@ -108,11 +110,8 @@ cat > $video_dir/$name.html << EOF
 <a href="http://$ip:10000/videos/709"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/res/TradeWar"><b>中美贸易战专题</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10000/videos/blog/report.html"><b>基本真相 - 迫害前大陆媒体对法轮功的报导</b></a>
-<br/><br/>
+<a href="http://$ip:10000/videos/blog/tuid.html"><b>三退大潮席卷全球</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10080/gb/8/11/24/n2339512.htm"><b>文昭：生活在希望中，做快乐的中国人</b></a>
-<br/><br/>
-<a href="http://$ip:10000/videos/blog/tuid.html"><b>三退大潮席卷全球 三亿人觉醒见证中共末日</b></a>
 <br/><br/>
 </p>
 </center>
