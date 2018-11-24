@@ -90,7 +90,7 @@ cat > $video_dir/$name.html << EOF
 <a href="http://$ip" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
-<a href="https://github.com/oGate2/oGate/blob/master/README.md" target="_blank"><b>网门</b></a>&nbsp;&nbsp;
+<a href="$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/blog/425event.html"><b>中南海万人上访始末</b></a>&nbsp;&nbsp;
