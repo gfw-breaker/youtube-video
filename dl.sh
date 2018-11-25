@@ -155,7 +155,7 @@ done
 if [ "$get_audio" == "" ]; then
 	exit
 fi
-le read v; do
+while read v; do
 	vid=$(echo $v | rev | cut -c5-15 | rev)
 	audio="$vid.mp3"
 	if [ -f "$audio" ]; then
