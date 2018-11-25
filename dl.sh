@@ -3,14 +3,23 @@
 
 video_count=50
 
-if [ $# -lt 2 ]; then
-	echo "please specify folder and url. exiting ..."
-	exit 1
-fi
+while getopts "f:u:s:a" arg; do
+	case $arg in
+		f)
+			folder=$OPTARG
+			;;
+		u)
+			youtube_url=$OPTARG
+			;;
+		s)
+			stick=$OPTARG
+			;;
+		a)
+			get_audio=1
+			;;
+	esac
+done
 
-folder=$1
-youtube_url=$2
-stick=$3
 
 video_dir=/usr/share/nginx/html/$folder
 index_page=$video_dir/index.html
@@ -91,6 +100,7 @@ cat > $video_dir/$name.html << EOF
 <a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
 <a href="$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
+<a href="$vid.mp3" target="_blank"><b>下载音频</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/blog/425event.html"><b>中南海万人上访始末</b></a>&nbsp;&nbsp;
@@ -140,4 +150,18 @@ for f in $dated; do
 	rm $f.html
 done
 
+
+## convert audio
+if [ "$get_audio" == "" ]; then
+	exit
+fi
+le read v; do
+	vid=$(echo $v | rev | cut -c5-15 | rev)
+	audio="$vid.mp3"
+	if [ -f "$audio" ]; then
+		echo "skipping $audio ..."
+		continue
+	fi
+	ffmpeg -i "$v" -b:a 64k -vn "$audio" </dev/null
+done < list.txt
 
