@@ -151,10 +151,21 @@ for f in $dated; do
 done
 
 
+# push
+cd /root/$folder
+git pull
+sed -i '5,$d' README.md
+cat $md_page >> README.md
+git commit -a -m 'ok'
+git push
+
+
 ## convert audio
 if [ "$get_audio" == "" ]; then
 	exit
 fi
+
+cd $video_dir
 while read v; do
 	vid=$(echo $v | rev | cut -c5-15 | rev)
 	audio="$vid.mp3"
