@@ -74,6 +74,7 @@ while read v; do
 	echo "##### <a href='http://$ip/$folder/$name.html'>$title</a>" >> $md_page
 
 cat > $video_dir/$name.html << EOF
+<html>
 <head>
 <title> $title </title>
 <meta charset="UTF-8"> 
@@ -81,14 +82,18 @@ cat > $video_dir/$name.html << EOF
 <link rel='stylesheet' id='videojs-css' href='https://unpkg.com/video.js@6.7.3/dist/video-js.min.css' type='text/css' media='all' />
 <style>
 #player {
-	margin: 0 auto;
-	margin-top: 0px;
-	width: 100%;
-	max-width: 640px;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 640px;
+        max-height: 400px;
+}
+h4 {
+        margin-top: 20px;
 }
 </style>
 </head>
-<br/>
+<body>
 <h4><center>$title</center></h4>
 <center>
 <video id="player" controls autoplay preload="auto">
@@ -126,6 +131,8 @@ cat > $video_dir/$name.html << EOF
 <br/><br/>
 </p>
 </center>
+</body>
+</html>
 EOF
 
 done < list.txt
