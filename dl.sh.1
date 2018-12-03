@@ -78,31 +78,22 @@ cat > $video_dir/$name.html << EOF
 <title> $title </title>
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script src="https://unpkg.com/video.js@6.7.3/dist/video.min.js"></script>
-<script src="https://unpkg.com/videojs-contrib-hls@5.14.1/dist/videojs-contrib-hls.min.js"></script>
 <link rel='stylesheet' id='videojs-css' href='https://unpkg.com/video.js@6.7.3/dist/video-js.min.css' type='text/css' media='all' />
 <style>
 #player {
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 0px;
 	width: 100%;
 	max-width: 640px;
-	max-height: 400px;
 }
 </style>
 </head>
 <br/>
 <h4><center>$title</center></h4>
 <center>
-<video id=player height="360px" width="640px" class="video-js vjs-default-skin vjs-big-play-centered" controls autoplay preload="auto">
-  <source
-     src="http://$ip:88/hls/$folder/$name/index.m3u8"
-     type="application/x-mpegURL">
+<video id="player" controls autoplay preload="auto">
+	<source src="$name" type="video/mp4">
 </video>
-<script type="text/javascript">
-    var player = videojs('player');
-    player.play();
-</script>
 <p>
 <a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b>翻墙软件</b></a>&nbsp;&nbsp;
 <a href="http://$ip" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
