@@ -1,7 +1,7 @@
 #!/bin/bash
 # author: gfw-breaker
 
-video_count=50
+video_count=40
 
 while getopts "f:u:s:a" arg; do
 	case $arg in
@@ -33,7 +33,8 @@ ts=$(date '+%m%d%H')
 mkdir -p $video_dir
 cd $video_dir
 #youtube-dl -f 18 \
-youtube-dl -f 133+140 \
+#youtube-dl -f 133+140 \
+youtube-dl -f 18 \
 	--max-downloads $video_count \
 	--playlist-end 200 \
 	-i $youtube_url
@@ -45,7 +46,7 @@ fi
 
 
 # remove old video files
-ls -t *mp4 | grep -v ^link | sed -n '80,$p' > deleted.txt
+ls -t *mp4 | grep -v ^link | sed -n '50,$p' > deleted.txt
 while read v ; do
 	echo "removing $v ..."
 	rm "$v"
