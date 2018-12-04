@@ -32,12 +32,12 @@ ts=$(date '+%m%d%H')
 # download videos
 mkdir -p $video_dir
 cd $video_dir
-#youtube-dl -f 18 \
+echo -e "\n\n======================\n\n" >> dl.log
 #youtube-dl -f 133+140 \
 youtube-dl -f 18 \
 	--max-downloads $video_count \
 	--playlist-end 200 \
-	-i $youtube_url
+	-i $youtube_url >> dl.log
 
 if [ $stick ]; then
 	youtube-dl -f 18 -i "https://www.youtube.com/watch?v=$stick"
