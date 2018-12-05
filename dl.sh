@@ -104,7 +104,7 @@ h4 {
 <body>
 <h4><center>$title</center></h4>
 <center>
-<video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto">
+<video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay>
   <source
      src="http://$ip:88/hls/$folder/$name/index.m3u8"
      type="application/x-mpegURL">
