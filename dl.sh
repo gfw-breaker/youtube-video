@@ -121,9 +121,9 @@ h4 {
 <a href="$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
 <a href="$vid.mp3" target="_blank"><b>下载音频</b></a>&nbsp;&nbsp;
 <br/><br/>
+<a href="http://$ip:10000/videos/world"><b>法轮大法洪传世界</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/blog/425event.html"><b>中南海万人上访始末</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/blog/report.html"><b>官媒正面报导法轮功</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/blog/425event.html"><b>4.25中南海万人上访始末</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="https://github.com/gfw-breaker/wenzhao/blob/master/README.md"><b>《文昭谈古论今》</b></a>&nbsp;
 <a href="https://github.com/gfw-breaker/ntdtv-comedy/blob/master/README.md"><b>《大陆新闻解读》</b></a>&nbsp;
