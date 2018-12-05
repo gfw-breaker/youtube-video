@@ -84,15 +84,20 @@ cat > $video_dir/$name.html << EOF
 <script src="https://unpkg.com/videojs-contrib-hls@5.14.1/dist/videojs-contrib-hls.min.js"></script>
 <link rel='stylesheet' id='videojs-css' href='https://unpkg.com/video.js@6.7.3/dist/video-js.min.css' type='text/css' media='all' />
 <style>
+h4 {
+	margin-top: 20px;
+}
 #player {
 	margin: 0 auto;
 	margin-top: 20px;
 	width: 100%;
 	max-width: 640px;
-	max-height: 400px;
+	height: 360px;
 }
-h4 {
-	margin-top: 20px;
+@media (max-width : 700px) {
+	#player {
+		height: 220px;
+	}
 }
 </style>
 </head>
