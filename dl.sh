@@ -121,7 +121,7 @@ h4 {
 <a href="http://$ip:10000/videos/blog/report.html"><b>官媒正面报导法轮功</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="https://github.com/gfw-breaker/wenzhao/blob/master/README.md"><b>《文昭谈古论今》</b></a>&nbsp;
-<a href="https://github.com/gfw-breaker/ntdtv-comedy/blob/master/README.md"><b>《时事小品》</b></a>&nbsp;
+<a href="https://github.com/gfw-breaker/ntdtv-comedy/blob/master/README.md"><b>《大陆新闻解读》</b></a>&nbsp;
 <a href="https://github.com/gfw-breaker/ntdtv-news/blob/master/README.md"><b>《新唐人中国禁闻》</b></a>&nbsp;
 <a href="https://github.com/gfw-breaker/today-in-history/blob/master/README.md"><b>《历史上的今天》</b></a>&nbsp;
 <br/><br/>
