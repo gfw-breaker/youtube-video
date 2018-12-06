@@ -104,14 +104,13 @@ h4 {
 <body>
 <h4><center>$title</center></h4>
 <center>
-<video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay>
+<video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="/card.png">
   <source
      src="http://$ip:88/hls/$folder/$name/index.m3u8"
      type="application/x-mpegURL">
 </video>
 <script type="text/javascript">
     var player = videojs('player');
-    player.play();
 </script>
 <p>
 <a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b>翻墙软件</b></a>&nbsp;&nbsp;
