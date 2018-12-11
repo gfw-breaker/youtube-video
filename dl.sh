@@ -113,7 +113,7 @@ h4 {
     var player = videojs('player');
 </script>
 <p>
-<a href="https://nogfw-007.herokuapp.com/proxy/http://www.zhuichaguoji.org/node/108500" target="_blank"><b>追查国际对中共活摘法轮功学员器官现状调查报告（七）（17个调查电话录音）</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10010/node/108500" target="_blank"><b>追查国际对中共活摘法轮功学员器官现状调查报告（七）（17个调查电话录音）</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b>翻墙软件</b></a>&nbsp;&nbsp;
 <a href="http://$ip" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
