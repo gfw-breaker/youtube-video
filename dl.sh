@@ -20,7 +20,7 @@ while getopts "f:u:s:a" arg; do
 	esac
 done
 
-
+data_server=
 video_dir=/usr/share/nginx/html/$folder
 index_page=$video_dir/index.html
 md_page=$video_dir/index.md
@@ -28,6 +28,9 @@ md_page=$video_dir/index.md
 ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
 ts=$(date '+%m%d%H')
 
+if [ "$data_server" == "" ]; then
+	data_server=$ip
+fi
 
 # download videos
 mkdir -p $video_dir
@@ -106,7 +109,7 @@ h4 {
 <center>
 <video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay poster="/card.png">
   <source
-     src="http://$ip:88/hls/$folder/$name/index.m3u8"
+     src="http://$data_server:88/hls/$folder/$name/index.m3u8"
      type="application/x-mpegURL">
 </video>
 <script type="text/javascript">
@@ -119,8 +122,8 @@ h4 {
 <a href="http://$ip" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
-<a href="$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
-<a href="$vid.mp3" target="_blank"><b>下载音频</b></a>&nbsp;&nbsp;
+<a href="http://$data_server/$folder/$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
+<a href="http://$data_server/$folder/$vid.mp3" target="_blank"><b>下载音频</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/world"><b>法轮大法洪传世界</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相</b></a>&nbsp;&nbsp;
