@@ -90,6 +90,9 @@ cat > $video_dir/$name.html << EOF
 h4 {
 	margin-top: 20px;
 }
+p b {
+	font-size: 15px;
+}
 #player {
 	margin: 0 auto;
 	margin-top: 20px;
