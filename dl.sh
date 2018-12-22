@@ -148,7 +148,7 @@ p b {
 <a href="http://$ip:10000/videos/709"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/res/TradeWar"><b>中美贸易战专题</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10000/videos/blog/tuid.html"><b>三退大潮席卷全球</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/tui/tuid.html"><b>三退大潮席卷全球</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10080/gb/8/11/24/n2339512.htm"><b>文昭：生活在希望中，做快乐的中国人</b></a>
 <br/><br/>
 </p>
