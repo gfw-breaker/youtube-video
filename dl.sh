@@ -185,7 +185,7 @@ cd /root/$folder
 git pull
 sed -i '5,$d' README.md
 cat $md_page >> README.md
-cp $md_page $video_dir
+cp README.md $video_dir
 git commit -a -m 'ok'
 git push
 
