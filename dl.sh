@@ -72,7 +72,14 @@ while read v; do
 	vid=$(echo $v | rev | cut -c5-15 | rev)
 	name="link.$ts.$vid.mp4"
 	title=$(echo $v | rev | cut -c17- | rev | sed 's/法轮功/法.轮.功/g' | sed 's/退/.退./g' | sed 's/党/.党/g' | sed 's/摘/.摘/g' ) 
-	
+
+	# download thumbnail
+	thumbnail="$vid.jpg"
+	if [ ! -f $thumbnail ]; then
+		wget -q "https://i.ytimg.com/vi/$vid/hqdefault.jpg" -O $thumbnail
+	fi	
+
+	# generate page
 	ln -s "$v" "$name" > /dev/null 2>&1
 	echo "<a href='http://$ip/$folder/$name.html'><b>$title</b></a></br></br>" >> $index_page
 	echo "##### <a href='http://$ip:80/$folder/$name.html'>$title</a>" >> $md_page
@@ -110,7 +117,7 @@ p b {
 <body>
 <h4><center>$title</center></h4>
 <center>
-<video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay poster="/card.png">
+<video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay poster="$thumbnail">
   <source
      src="http://$data_server:88/hls/$folder/$name/index.m3u8"
      type="application/x-mpegURL">
