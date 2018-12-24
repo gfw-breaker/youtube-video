@@ -75,7 +75,7 @@ while read v; do
 	
 	ln -s "$v" "$name" > /dev/null 2>&1
 	echo "<a href='http://$ip/$folder/$name.html'><b>$title</b></a></br></br>" >> $index_page
-	echo "##### <a href='http://$ip/$folder/$name.html'>$title</a>" >> $md_page
+	echo "##### <a href='http://$ip:80/$folder/$name.html'>$title</a>" >> $md_page
 
 cat > $video_dir/$name.html << EOF
 <html>
@@ -166,8 +166,8 @@ echo "</body></html>" >> $index_page
 plinks="##### 反向代理： [新唐人直播](http://$ip) &nbsp;|&nbsp; [Google](http://$ip:8888/search?q=425事件) &nbsp;|&nbsp; [维基百科](http://$ip:8100/wiki/喬高-麥塔斯調查報告) &nbsp;|&nbsp; [大纪元新闻网](http://$ip:10080) &nbsp;|&nbsp; [新唐人电视台](http://$ip:8000) &nbsp;|&nbsp; [我的博客](http://$ip:10000/) &nbsp;|&nbsp; [追查国际](http://$ip:10010)"
 vlinks="##### 精彩视频： [《传奇时代》](http://$ip:10000/videos/legend/) | [《风雨天地行》](http://$ip:10000/videos/fytdx/) | [《九评共产党》](http://$ip:10000/videos/jiuping/) | [《漫谈党文化》](http://$ip:10000/videos/mtdwh/) | [《百年红祸》](http://$ip:10000/videos/bnhh) |&nbsp; [709维权律师](http://$ip:10000/videos/709/)"
 
-sed -i "4 a$vlinks" $md_page
-sed -i "4 a$plinks" $md_page
+#sed -i "4 a$vlinks" $md_page
+#sed -i "4 a$plinks" $md_page
 
 
 ## clean up
@@ -185,6 +185,7 @@ cd /root/$folder
 git pull
 sed -i '5,$d' README.md
 cat $md_page >> README.md
+cp $md_page $video_dir
 git commit -a -m 'ok'
 git push
 
