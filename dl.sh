@@ -76,7 +76,7 @@ while read v; do
 	# download thumbnail
 	thumbnail="$vid.jpg"
 	if [ ! -f $thumbnail ]; then
-		wget -q "https://i.ytimg.com/vi/$vid/sddefault.jpg" -O $thumbnail
+		wget -q "https://i.ytimg.com/vi/$vid/maxresdefault.jpg" -O $thumbnail
 	fi	
 
 	# generate page
