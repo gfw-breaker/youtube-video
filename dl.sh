@@ -126,7 +126,7 @@ p b {
     var player = videojs('player');
 </script>
 <p>
-<a href="http://$ip:10010/node/108500" target="_blank"><b>追查国际对中共活摘法轮功学员器官现状调查报告（七）（17个调查电话录音）</b></a>&nbsp;&nbsp;
+<a href="http://$ip:8000/gb/2018/12/27/a102475433.html" target="_blank"><b>追查国际对迫害王全璋律师的责任人的追查公告</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b>翻墙软件</b></a>&nbsp;&nbsp;
 <a href="http://$ip" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
