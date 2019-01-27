@@ -81,7 +81,7 @@ while read v; do
 
 	# generate page
 	ln -s "$v" "$name" > /dev/null 2>&1
-	echo "<a href='http://$ip/$folder/$name.html'><b>$title</b></a></br></br>" >> $index_page
+	echo "<a href='http://$ip/$folder/$name'><b>$title</b></a></br></br>" >> $index_page
 	echo "##### <a href='http://$ip:80/$folder/$name.html'>$title</a>" >> $md_page
 
 cat > $video_dir/$name.html << EOF
@@ -133,7 +133,7 @@ p b {
 <a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
 <a href="http://$data_server/$folder/$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
-<a href="http://$data_server/$folder/$vid.mp3" target="_blank"><b>下载音频</b></a>&nbsp;&nbsp;
+<a href="http://$data_server/$folder/" target="_blank"><b>批量下载</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/world"><b>法轮大法洪传世界</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相</b></a>&nbsp;&nbsp;
