@@ -48,7 +48,20 @@ if [ $stick ]; then
 fi
 
 
-# remove old video files
+# remove duplicated videos
+rm -fr *.tmp
+ls -t *mp4 | grep -v ^link > all.txt
+while read line ; do
+        vid=$(echo $line | rev | cut -c5-15 | rev )
+        if [ ! -f $vid.tmp ]; then
+                touch $vid.tmp
+        else
+                rm "$line"
+        fi
+done < all.txt
+
+
+# remove old videos
 ls -t *mp4 | grep -v ^link | sed -n '50,$p' > deleted.txt
 while read v ; do
 	echo "removing $v ..."
