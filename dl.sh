@@ -1,7 +1,7 @@
 #!/bin/bash
 # author: gfw-breaker
 
-video_count=30
+video_count=40
 
 while getopts "f:u:s:a" arg; do
 	case $arg in
