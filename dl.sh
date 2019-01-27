@@ -61,6 +61,16 @@ while read line ; do
 done < all.txt
 
 
+# relink
+for link in $(ls link*.mp4); do
+	if [ ! -f $link ]; then
+		id=$(echo $link | cut -d'.' -f3)
+		rm $link
+		ln -s *-$id.mp4 $link
+	fi
+done
+
+
 # remove old videos
 ls -t *mp4 | grep -v ^link | sed -n '40,$p' > deleted.txt
 while read v ; do
