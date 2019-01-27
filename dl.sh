@@ -1,7 +1,7 @@
 #!/bin/bash
 # author: gfw-breaker
 
-video_count=40
+video_count=30
 
 while getopts "f:u:s:a" arg; do
 	case $arg in
@@ -62,7 +62,7 @@ done < all.txt
 
 
 # remove old videos
-ls -t *mp4 | grep -v ^link | sed -n '50,$p' > deleted.txt
+ls -t *mp4 | grep -v ^link | sed -n '40,$p' > deleted.txt
 while read v ; do
 	echo "removing $v ..."
 	rm "$v"
