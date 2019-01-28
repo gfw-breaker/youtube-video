@@ -214,8 +214,8 @@ done
 cd /root/$folder
 git pull
 #sed -i '5,$d' README.md
-cat desc.md > README.md
-cat $md_page >> README.md
+#cat desc.md > README.md
+cat $md_page > README.md
 cp README.md $video_dir
 git commit -a -m 'ok'
 git push
