@@ -217,7 +217,7 @@ git pull
 #cat $md_page > README.md
 #cp README.md $video_dir
 cp $md_page new.md 
-git add *
+git add *.md
 git commit -a -m 'ok'
 git push
 
