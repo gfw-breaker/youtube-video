@@ -21,7 +21,7 @@ while getopts "f:u:s:a" arg; do
 done
 
 data_server=
-server_port=8899
+server_port=80
 video_dir=/usr/share/nginx/html/$folder
 index_page=$video_dir/index.html
 md_page=$video_dir/index.md
