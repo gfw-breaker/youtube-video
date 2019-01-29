@@ -21,6 +21,7 @@ while getopts "f:u:s:a" arg; do
 done
 
 data_server=
+server_port=8899
 video_dir=/usr/share/nginx/html/$folder
 index_page=$video_dir/index.html
 md_page=$video_dir/index.md
@@ -104,8 +105,8 @@ while read v; do
 
 	# generate page
 	ln -s "$v" "$name" > /dev/null 2>&1
-	echo "<a href='http://$ip/$folder/$name'><b>$title</b></a></br></br>" >> $index_page
-	echo "##### <a href='http://$ip:80/$folder/$name.html'>$title</a>" >> $md_page
+	echo "<a href='http://$ip:$server_port/$folder/$name'><b>$title</b></a></br></br>" >> $index_page
+	echo "##### <a href='http://$ip:$server_port/$folder/$name.html'>$title</a>" >> $md_page
 
 cat > $video_dir/$name.html << EOF
 <html>
