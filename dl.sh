@@ -214,13 +214,12 @@ done
 # push
 cd /root/$folder
 git pull
-#cat desc.md > README.md
-#cat $md_page > README.md
+git checkout 5mao
+cat desc.md > README.md
+cat $md_page >> README.md
 #cp README.md $video_dir
-cp $md_page new.md 
-git add *.md
 git commit -a -m 'ok'
-git push
+git push origin 5mao
 
 
 ## convert audio
