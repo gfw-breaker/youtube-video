@@ -207,7 +207,7 @@ done
 
 # push
 cd /root/$folder
-git pull
+git pull origin 5mao
 git checkout 5mao
 cat desc.md > README.md
 cat $md_page >> README.md
