@@ -114,6 +114,9 @@ cat > $video_dir/$name.html << EOF
 <title> $title </title>
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="/video.min.js"></script>
+<script src="/videojs-contrib-hls.min.js"></script>
+<link rel='stylesheet' id='videojs-css' href='/video-js.min.css' type='text/css' media='all' />
 <style>
 h4 {
 	margin-top: 20px;
@@ -140,9 +143,12 @@ p b {
 <center>
 <video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay poster="$thumbnail">
   <source
-     src="http://$data_server/$folder/$name"
-     type="video/mp4">
+     src="http://$data_server:88/hls/$folder/$name/index.m3u8"
+     type="application/x-mpegURL">
 </video>
+<script type="text/javascript">
+    var player = videojs('player');
+</script>
 <p>
 <a href="http://$ip:8000/gb/2018/12/27/a102475433.html" target="_blank"><b>追查国际对迫害王全璋律师的责任人的追查公告</b></a>&nbsp;&nbsp;
 <br/><br/>
