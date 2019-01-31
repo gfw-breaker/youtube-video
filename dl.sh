@@ -105,7 +105,7 @@ while read v; do
 
 	# generate page
 	ln -s "$v" "$name" > /dev/null 2>&1
-	echo "<a href='http://$ip:$server_port/$folder/$name'><b>$title</b></a></br></br>" >> $index_page
+	echo "<a href='http://$ip:$server_port/$folder/$name.html'><b>$title</b></a></br></br>" >> $index_page
 	echo "##### <a href='http://$ip:$server_port/$folder/$name.html'>$title</a>" >> $md_page
 
 cat > $video_dir/$name.html << EOF
