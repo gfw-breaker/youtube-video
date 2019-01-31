@@ -153,11 +153,11 @@ p b {
 <a href="http://$ip:8000/gb/2018/12/27/a102475433.html" target="_blank"><b>追查国际对迫害王全璋律师的责任人的追查公告</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b>翻墙软件</b></a>&nbsp;&nbsp;
-<a href="http://$ip" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
+<a href="http://$ip:$server_port" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
-<a href="http://$data_server/$folder/$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
-<a href="http://$data_server/$folder/" target="_blank"><b>批量下载</b></a>&nbsp;&nbsp;
+<a href="http://$data_server:$server_port/$folder/$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
+<a href="http://$data_server:$server_port/$folder/" target="_blank"><b>批量下载</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/world"><b>法轮大法洪传世界</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相</b></a>&nbsp;&nbsp;
@@ -170,10 +170,10 @@ p b {
 <a href="http://$ip:10000/videos/mtdwh/index.html"><b>《漫谈党文化》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/bnhh/index.html"><b>《百年红祸》</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="https://github.com/gfw-breaker/wenzhao><b>《文昭谈古论今》</b></a>&nbsp;
-<a href="https://github.com/gfw-breaker/ntdtv-comedy"><b>《大陆新闻解读》</b></a>&nbsp;
-<a href="https://github.com/gfw-breaker/ntdtv-news"><b>《新唐人中国禁闻》</b></a>&nbsp;
-<a href="https://github.com/gfw-breaker/today-in-history"><b>《历史上的今天》</b></a>&nbsp;
+<a href="http://$ip:$server_port/wenzhao><b>《文昭谈古论今》</b></a>&nbsp;
+<a href="http://$ip:$server_port/ntdtv-comedy"><b>《大陆新闻解读》</b></a>&nbsp;
+<a href="http://$ip:$server_port/ntdtv-news"><b>《新唐人中国禁闻》</b></a>&nbsp;
+<a href="http://$ip:$server_port/today-in-history"><b>《历史上的今天》</b></a>&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/res/Organs"><b>中共摘取活体器官</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/709"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
@@ -213,13 +213,12 @@ done
 
 # push
 cd /root/$folder
-git pull origin 5mao
-git checkout 5mao
+git pull 
 cat desc.md > README.md
 cat $md_page >> README.md
 #cp README.md $video_dir
 git commit -a -m 'ok'
-git push origin 5mao
+git push
 
 
 ## convert audio
