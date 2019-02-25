@@ -179,7 +179,7 @@ p b {
 <a href="http://$ip:10000/videos/mtdwh/index.html"><b>《漫谈党文化》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/bnhh/index.html"><b>《百年红祸》</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:$server_port/wenzhao><b>《文昭谈古论今》</b></a>&nbsp;
+<a href="http://$ip:$server_port/wenzhao"><b>《文昭谈古论今》</b></a>&nbsp;
 <a href="http://$ip:$server_port/ntdtv-comedy"><b>《大陆新闻解读》</b></a>&nbsp;
 <a href="http://$ip:$server_port/ntdtv-news"><b>《新唐人中国禁闻》</b></a>&nbsp;
 <a href="http://$ip:$server_port/today-in-history"><b>《历史上的今天》</b></a>&nbsp;
