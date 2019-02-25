@@ -141,7 +141,7 @@ p b {
 </head>
 <body>
 <h4><center>$title</center></h4>
-<center><span id='p' style='color:red'>微信中无法正常打开时，请点击右上角的"..."，点击"在Safari中打开"或者"在浏览器打开"</span></center>
+<center><span id='p' style='color:red'>微信中无法正常打开时，请点击右上角的"..."，点击"在Safari中打开"或者"在浏览器打开"，然后点击左上角"原网页"</span></center>
 <center>
 <video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay poster="$thumbnail">
   <source
