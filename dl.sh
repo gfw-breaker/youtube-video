@@ -204,7 +204,7 @@ echo "</body></html>" >> $index_page
 
 # batch page
 sed 's/\.html//g' $index_page > $batch_page
-sed 's/<body>/<body><h2>视频批量下载页面<\/h2>/g' $batch_page
+sed -i 's/<body>/<body><h2>视频批量下载页面<\/h2>/g' $batch_page
 
 # commit
 plinks="##### 反向代理： [新唐人直播](http://$ip) &nbsp;|&nbsp; [Google](http://$ip:8888/search?q=425事件) &nbsp;|&nbsp; [维基百科](http://$ip:8100/wiki/喬高-麥塔斯調查報告) &nbsp;|&nbsp; [大纪元新闻网](http://$ip:10080) &nbsp;|&nbsp; [新唐人电视台](http://$ip:8000) &nbsp;|&nbsp; [我的博客](http://$ip:10000/) &nbsp;|&nbsp; [追查国际](http://$ip:10010)"
