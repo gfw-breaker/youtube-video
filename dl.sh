@@ -133,6 +133,12 @@ p b {
 	max-width: 640px;
 	height: 360px;
 }
+.video-js .vjs-big-play-button{
+    height: 2.5em;
+    width: 2.5em;
+    line-height: 2.5em;
+    border-radius: 2.5em;
+}
 @media (max-width : 700px) {
 	#player {
 		height: 220px;
