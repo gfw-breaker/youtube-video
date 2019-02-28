@@ -231,13 +231,13 @@ done
 
 
 # push
-cd /root/$folder
-git pull 
-cat desc.md > README.md
-cat $md_page >> README.md
+#cd /root/$folder
+#git pull 
+#cat desc.md > README.md
+#cat $md_page >> README.md
 #cp README.md $video_dir
-git commit -a -m 'ok'
-git push
+#git commit -a -m 'ok'
+#git push
 
 
 ## convert audio
