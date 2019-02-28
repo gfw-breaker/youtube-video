@@ -46,7 +46,7 @@ youtube-dl -f 18 \
 
 if [ $stick ]; then
 	youtube-dl -f 18 -i "https://www.youtube.com/watch?v=$stick"
-	touch *$stick*
+	touch -- *$stick*
 fi
 
 
@@ -56,7 +56,7 @@ ls -t *mp4 | grep -v ^link > all.txt
 while read line ; do
         vid=$(echo $line | rev | cut -c5-15 | rev )
         if [ ! -f $vid.tmp ]; then
-                touch $vid.tmp
+                touch -- $vid.tmp
         else
                 rm "$line"
         fi
