@@ -2,8 +2,9 @@
 # author: gfw-breaker
 
 baseUrl="https://www.youtube.com"
-cwd=$(pwd)
+cwd=/root/youtube-video
 
+cd $cwd
 while read line; do
 	name=$(echo $line | cut -d',' -f1)
 	id=$(echo $line | cut -d',' -f2)
