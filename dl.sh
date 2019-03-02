@@ -51,7 +51,7 @@ fi
 
 
 # remove duplicated videos
-rm -fr *.tmp
+rm -fr -- *.tmp
 ls -t *mp4 | grep -v ^link > all.txt
 while read line ; do
         vid=$(echo $line | rev | cut -c5-15 | rev )
