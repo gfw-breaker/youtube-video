@@ -1,7 +1,7 @@
 #!/bin/bash
 # author: gfw-breaker
 
-video_count=20
+video_count=15
 
 while getopts "f:u:s:a" arg; do
 	case $arg in
@@ -74,7 +74,7 @@ done
 
 
 # remove old videos
-ls -t *mp4 | grep -v ^link | sed -n '25,$p' > deleted.txt
+ls -t *mp4 | grep -v ^link | sed -n '18,$p' > deleted.txt
 while read v ; do
 	echo "removing $v ..."
 	rm "$v"
@@ -90,6 +90,7 @@ cat > $index_page << EOF
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
+<a href='http://$ip:$server_port/big-shorts/'><b>揭秘央视喉舌运作机制讽刺喜剧 - 《大裤衩》（未完待续）</b></a></br></br>
 EOF
 
 ls -t *.mp4 | grep -v ^link > list.txt
