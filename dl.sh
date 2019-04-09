@@ -91,6 +91,7 @@ cat > $index_page << EOF
 </head>
 <body>
 <a href='http://$ip:$server_port/big-shorts/'><b>揭秘央视喉舌运作机制讽刺喜剧 - 《大裤衩》（未完待续）</b></a></br></br>
+<a href='http://$ip:10000/videos/mtdwh/'><b>常见党文化思维解析，教您驳斥五毛言论 - 《漫谈党文化》</b></a></br></br>
 EOF
 
 ls -t *.mp4 | grep -v ^link > list.txt
