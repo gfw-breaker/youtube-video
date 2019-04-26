@@ -42,7 +42,7 @@ echo -e "\n\n======================\n\n" >> dl.log
 youtube-dl -f 18 \
 	--max-downloads $video_count \
 	--playlist-end 200 \
-	-i $youtube_url >> dl.log
+	-i $youtube_url | tee dl.log
 
 if [ $stick ]; then
 	youtube-dl -f 18 -i "https://www.youtube.com/watch?v=$stick"
@@ -90,8 +90,6 @@ cat > $index_page << EOF
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-<a href='http://$ip:$server_port/big-shorts/'><b>揭秘央视喉舌运作机制讽刺喜剧 - 《大裤衩》（未完待续）</b></a></br></br>
-<a href='http://$ip:10000/videos/mtdwh/'><b>常见党文化思维解析，教您驳斥五毛言论 - 《漫谈党文化》</b></a></br></br>
 EOF
 
 ls -t *.mp4 | grep -v ^link > list.txt
@@ -168,37 +166,30 @@ p b {
     var player = videojs('player');
 </script>
 <p>
-<a href="http://$ip:8000/gb/2018/12/27/a102475433.html" target="_blank"><b>追查国际对迫害王全璋律师的责任人的追查公告</b></a>&nbsp;&nbsp;
-<br/><br/>
 <a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b>翻墙软件</b></a>&nbsp;&nbsp;
-<a href="http://$ip:$server_port" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
-<a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker/ssr-accounts" target="_blank"><b>免费SS/SSR账号</b></a>&nbsp;&nbsp;
+<a href="https://github.com/oGate2/oGate" target="_blank"><b>网门</b></a>&nbsp;&nbsp;
 <a href="http://$data_server:$server_port/$folder/$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
 <a href="http://$data_server:$server_port/$folder/batch.html" target="_blank"><b>批量下载</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10000/videos/world"><b>法轮大法洪传世界</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/blog/425event.html"><b>4.25中南海万人上访始末</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/blog/jiexi1400.html"><b>所谓"1400例"谎言揭秘</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
+<a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
+<a href="http://$ip:8200" target="_blank"><b>希望之声</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10010" target="_blank"><b>追查国际</b></a>&nbsp;&nbsp;
+<a href="http://$ip:9800" target="_blank"><b>自由亚洲电台</b></a>&nbsp;&nbsp;
+<a href="http://$ip:$server_port" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10000/videos/legend/index.html"><b>《传奇时代》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/fytdx/index.html"><b>《风雨天地行》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/jiuping/index.html"><b>《九评共产党》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/mtdwh/index.html"><b>《漫谈党文化》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/bnhh/index.html"><b>《百年红祸》</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/truth.html"><b>法轮功真相</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/res/Organs/)"><b>活摘器官</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/709/)"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/jiuping/)"><b>《九评共产党》</b></a>&nbsp;
+<a href="http://$ip:10000/videos/ccp.html)"><b>共产党百年历史</b></a>&nbsp;
 <br/><br/>
+<a href="http://$ip:$server_port/tianliang"><b>《天亮时分》</b></a>&nbsp;
 <a href="http://$ip:$server_port/wenzhao"><b>《文昭谈古论今》</b></a>&nbsp;
-<a href="http://$ip:$server_port/ntdtv-comedy"><b>《大陆新闻解读》</b></a>&nbsp;
-<a href="http://$ip:$server_port/ntdtv-news"><b>《新唐人中国禁闻》</b></a>&nbsp;
 <a href="http://$ip:$server_port/today-in-history"><b>《历史上的今天》</b></a>&nbsp;
-<br/><br/>
-<a href="http://$ip:10000/videos/res/Organs"><b>中共摘取活体器官</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/709"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/res/TradeWar"><b>中美贸易战专题</b></a>&nbsp;&nbsp;
-<br/><br/>
-<a href="http://$ip:10000/videos/tui/tuid.html"><b>三退大潮席卷全球</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10080/gb/8/11/24/n2339512.htm"><b>文昭：生活在希望中，做快乐的中国人</b></a>
+<a href="http://$ip:$server_port/ntdtv-comedy"><b>《大陆新闻解读》</b></a>&nbsp;
+<a href="http://$ip:$server_port/ntdtv-news"><b>《中国禁闻》</b></a>&nbsp;
 <br/><br/>
 </p>
 </center>
@@ -257,4 +248,5 @@ while read v; do
 	fi
 	ffmpeg -i "$v" -b:a 64k -vn "$audio" </dev/null
 done < list.txt
+
 
