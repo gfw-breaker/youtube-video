@@ -170,26 +170,27 @@ p b {
 <a href="https://github.com/gfw-breaker/ssr-accounts" target="_blank"><b>免费SS账号</b></a>&nbsp;&nbsp;
 <a href="https://github.com/oGate2/oGate" target="_blank"><b>网门</b></a>&nbsp;&nbsp;
 <a href="http://$data_server:$server_port/$folder/$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
-<a href="http://$data_server:$server_port/$folder/batch.html" target="_blank"><b>批量下载</b></a>&nbsp;&nbsp;
+<a href="http://$data_server:$server_port/$folder/batch.html"><b>批量下载</b></a>&nbsp;&nbsp;
 <br/><br/>
-<a href="http://$ip:10080" target="_blank"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
-<a href="http://$ip:8000" target="_blank"><b>新唐人电视台</b></a>&nbsp;&nbsp;
-<a href="http://$ip:8200" target="_blank"><b>希望之声</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10010" target="_blank"><b>追查国际</b></a>&nbsp;&nbsp;
-<a href="http://$ip:9800" target="_blank"><b>自由亚洲电台</b></a>&nbsp;&nbsp;
-<a href="http://$ip:$server_port" target="_blank"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10080"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
+<a href="http://$ip:8000"><b>新唐人电视台</b></a>&nbsp;&nbsp;
+<a href="http://$ip:8200"><b>希望之声</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10010"><b>追查国际</b></a>&nbsp;&nbsp;
+<a href="http://$ip:9800"><b>自由亚洲电台</b></a>&nbsp;&nbsp;
+<a href="http://$ip:$server_port"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/truth.html"><b>法轮功真相</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/res/Organs/)"><b>活摘器官</b></a>&nbsp;&nbsp;
-<a href="http://$ip:10000/videos/709/)"><b>709维权律师大抓捕</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/709/)"><b>维权律师大抓捕</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/jiuping/)"><b>《九评共产党》</b></a>&nbsp;
 <a href="http://$ip:10000/videos/ccp.html)"><b>共产党百年历史</b></a>&nbsp;
 <br/><br/>
-<a href="http://$ip:$server_port/tianliang"><b>《天亮时分》</b></a>&nbsp;
-<a href="http://$ip:$server_port/wenzhao"><b>《文昭谈古论今》</b></a>&nbsp;
-<a href="http://$ip:$server_port/today-in-history"><b>《历史上的今天》</b></a>&nbsp;
-<a href="http://$ip:$server_port/ntdtv-comedy"><b>《大陆新闻解读》</b></a>&nbsp;
-<a href="http://$ip:$server_port/ntdtv-news"><b>《中国禁闻》</b></a>&nbsp;
+<a href="http://$ip:$server_port/tianliang/"><b>天亮时分</b></a>&nbsp;&nbsp;
+<a href="http://$ip:$server_port/wenzhao/"><b>文昭谈古论今</b></a>&nbsp;&nbsp;
+<a href="http://$ip:$server_port/today-in-history/"><b>历史上的今天</b></a>&nbsp;&nbsp;
+<a href="http://$ip:$server_port/ntdtv-comedy/"><b>大陆新闻解读</b></a>&nbsp;&nbsp;
+<a href="http://$ip:$server_port/ntdtv-news/"><b>中国禁闻</b></a>&nbsp;&nbsp;
+<a href="http://$ip:$server_port/ntdtv-rdhd/"><b>热点互动</b></a>&nbsp;
 <br/><br/>
 </p>
 </center>
