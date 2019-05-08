@@ -167,6 +167,7 @@ p b {
 </script>
 <span style='color:red; font-size:14px; margin-bottom:100px'>服务器被封锁越来越频繁，建议及时下载视频后观看</span>
 <p>
+<a href="https://github.com/gfw-breaker/guides/wiki" target="_blank"><b>手把手翻墙教程</b></a>&nbsp;&nbsp;
 <a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b>翻墙软件</b></a>&nbsp;&nbsp;
 <a href="https://github.com/gfw-breaker/ssr-accounts" target="_blank"><b>免费SS账号</b></a>&nbsp;&nbsp;
 <a href="https://github.com/oGate2/oGate" target="_blank"><b>网门</b></a>&nbsp;&nbsp;
