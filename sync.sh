@@ -4,6 +4,8 @@
 baseUrl="https://www.youtube.com"
 cwd=/root/youtube-video
 
+youtube-dl -U
+
 cd $cwd
 while read line; do
 	name=$(echo $line | cut -d',' -f1)
