@@ -93,7 +93,7 @@ cat > $index_page << EOF
 <a href='http://$ip:10000/videos/res/Organs/'><b>器官活摘</b></a> &nbsp;&nbsp;
 <a href='http://$ip:10000/videos/blog/weihuo.html'><b>天安门自焚真相</b></a> &nbsp;&nbsp;
 <a href='http://$ip:10000/videos/88/'><b>8964天安门大屠杀<b></a></br></br>
-<a href='http://$ip/big-shorts'><b>揭秘央视运作手法幽默讽刺剧《大裤衩》</b></a></br></br>
+<a href='http://$ip:10000/videos/res/big-shorts/'><b>揭秘央视运作手法幽默讽刺剧《大裤衩》</b></a></br></br>
 
 EOF
 
