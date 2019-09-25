@@ -1,7 +1,7 @@
 #!/bin/bash
 # author: gfw-breaker
 
-video_count=15
+video_count=6
 
 while getopts "f:u:s:a" arg; do
 	case $arg in
@@ -41,7 +41,7 @@ echo -e "\n\n======================\n\n" >> dl.log
 #youtube-dl -f 133+140 \
 youtube-dl -f 18 \
 	--max-downloads $video_count \
-	--playlist-end 200 \
+	--playlist-end 20 \
 	-i $youtube_url | tee dl.log
 
 if [ $stick ]; then
