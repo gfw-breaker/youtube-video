@@ -181,11 +181,13 @@ p b {
 <a href="http://$data_server:$server_port/$folder/$name" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
 <a href="http://$data_server:$server_port/$folder/batch.html"><b>批量下载</b></a>&nbsp;&nbsp;
 <br/><br/>
+<!--
 <a href="http://$ip:10080"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8000"><b>新唐人电视台</b></a>&nbsp;&nbsp;
 <a href="http://$ip:8200"><b>希望之声</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10010"><b>追查国际</b></a>&nbsp;&nbsp;
 <a href="http://$ip:9800"><b>自由亚洲电台</b></a>&nbsp;&nbsp;
+-->
 <a href="http://$ip:$server_port"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
 <br/><br/>
 <a href="http://$ip:10000/videos/truth.html"><b>法轮功真相</b></a>&nbsp;&nbsp;
