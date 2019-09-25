@@ -41,7 +41,7 @@ echo -e "\n\n======================\n\n" >> dl.log
 #youtube-dl -f 133+140 \
 youtube-dl -f 18 \
 	--max-downloads $video_count \
-	--playlist-end 20 \
+	--playlist-end 100 \
 	-i $youtube_url | tee dl.log
 
 if [ $stick ]; then
