@@ -14,3 +14,4 @@ youtube-dl -f 18 --restrict-filenames $vid
 mv *-$vid.mp4 $fname.mp4
 
 autosub -F srt -S zh-CN -D zh-CN $fname.mp4
+
