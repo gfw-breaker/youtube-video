@@ -90,7 +90,7 @@ cat > $index_page << EOF
 <body>
 EOF
 
-cat /root/youtube-video/links.html >> $index_page
+sed -i "s/proxy_server_id/$ip/g" /root/youtube-video/links.html >> $index_page
 
 ls -t *.mp4 | grep -v ^link > list.txt
 
