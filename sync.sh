@@ -5,6 +5,7 @@ baseUrl="https://www.youtube.com"
 cwd=/root/youtube-video
 
 youtube-dl -U
+git pull
 
 cd $cwd
 while read line; do
