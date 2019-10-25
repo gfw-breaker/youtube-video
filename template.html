@@ -1,0 +1,86 @@
+<html>
+<head>
+<title> videoTitle </title>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="https://cdn.bootcss.com/video.js/7.5.0/video.min.js"></script>
+<script src="https://cdn.bootcss.com/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js"></script>
+<link rel='stylesheet' id='videojs-css' href='https://cdn.bootcss.com/video.js/7.5.0/video-js.min.css' type='text/css' media='all' />
+<style>
+h4 {
+	margin-top: 20px;
+}
+p b {
+	font-size: 15px;
+}
+#player {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 100%;
+	max-width: 640px;
+	height: 360px;
+}
+.video-js .vjs-big-play-button{
+    height: 2.5em;
+    width: 2.5em;
+    line-height: 2.5em;
+    border-radius: 2.5em;
+}
+@media (max-width : 700px) {
+	#player {
+		height: 220px;
+	}
+}
+</style>
+</head>
+<body>
+<h4><center> videoTitle </center></h4>
+<center><span id='p' style='color:red'>微信中无法正常打开时，请点击右上角的"..."，点击"在Safari中打开"或者"在浏览器打开"，然后点击左上角"原网页"</span></center>
+<center>
+<video id=player class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay poster="LWMmHLC8lII.jpg">
+  <source
+     src="http://proxy_server_ip:88/hls/videoFolder/videoFile/index.m3u8"
+     type="application/x-mpegURL">
+</video>
+<script>
+    var ua = navigator.userAgent.toLowerCase();
+    var isWeixin = ua.indexOf('micromessenger') != -1;
+    if (! isWeixin) {
+		document.getElementById("p").innerHTML="";
+    }
+</script>
+<script type="text/javascript">
+    var player = videojs('player');
+</script>
+<span style='color:red; font-size:14px; margin-bottom:100px'>服务器被封锁越来越频繁，建议及时下载视频后观看</span>
+<p>
+<a href="http://proxy_server_ip:80"><b>新唐人电视直播</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker/guides/wiki"><b>翻墙教程</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:80/videoFolder/videoFile" target="_blank"><b>下载视频</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:80/videoFolder/batch.html"><b>批量下载</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:10000/videos/"><b>必看视频清单</b></a>&nbsp;
+<br/><br/>
+<!--
+<a href="http://proxy_server_ip:10080"><b>大纪元新闻网</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:8000"><b>新唐人电视台</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:8200"><b>希望之声</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:10010"><b>追查国际</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:9800"><b>自由亚洲电台</b></a>&nbsp;&nbsp;
+-->
+<a href="http://proxy_server_ip:10000/videos/truth.html"><b>法轮功真相</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:10000/videos/res/Organs/"><b>活摘器官</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:10000/videos/709/"><b>维权律师大抓捕</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:10000/videos/ccp.html"><b>共产党百年历史</b></a>&nbsp;
+<a href="http://proxy_server_ip:10000/videos/res/hk/"><b>香港反送中运动</b></a>&nbsp;
+<br/><br/>
+<a href="http://proxy_server_ip:80/videoFolder/"><b>天亮时分</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:80/wenzhao/"><b>文昭谈古论今</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:80/today-in-history/"><b>历史上的今天</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:80/ntdtv-comedy/"><b>大陆新闻解读</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:80/ntdtv-news/"><b>中国禁闻</b></a>&nbsp;&nbsp;
+<a href="http://proxy_server_ip:80/ntdtv-rdhd/"><b>热点互动</b></a>&nbsp;
+<br/><br/>
+</p>
+</center>
+</body>
+</html>
