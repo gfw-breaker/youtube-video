@@ -1,6 +1,14 @@
 #!/bin/bash
 # author: gfw-breaker
 
+channel=$1
+csv=channels.csv
+
+if [ ! -z $channel ]; then
+	grep $channel $csv > tmp.csv
+	csv=tmp.csv
+fi
+
 baseUrl="https://www.youtube.com"
 cwd=/root/youtube-video
 
@@ -15,4 +23,4 @@ while read line; do
 	sticky=$(echo $line | cut -d',' -f4)
 	channelUrl=$baseUrl/$id
 	bash $cwd/dl.sh -f $folder -u $channelUrl -s $sticky
-done < channels.csv
+done < $csv
