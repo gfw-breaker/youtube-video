@@ -39,7 +39,7 @@ while read line; do
 	if [ -f $vname.mp4 ]; then
 		echo "$vname.mp4 exists"
 	else
-		youtube-dl -o "_%(id)s.%(ext)s" -f 18 $id
+		youtube-dl -o "_%(id)s.%(ext)s" -f 18 -- $id
 	fi
 
 	sed -e "s/videoFile/$vname.mp4/g" -e "s/videoFolder/$folder/g" \
