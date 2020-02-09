@@ -46,7 +46,7 @@ while read line; do
 		-e "s/videoTitle/$title/g" -e "s/proxy_server_ip/$ip/g" \
 		 /root/youtube-video/template.html > $video_dir/$vname.html 
 
-	grep $id list.txt > /dev/null 2>&1
+	grep -- $id list.txt > /dev/null 2>&1
 	
 	if [ $? -eq 0 ]; then
 		echo 'ok'	
@@ -66,6 +66,15 @@ for folder in $channels; do
 	video_dir=$nginx_dir/$folder
 
 	cd $video_dir
+
+	oldItems=$(sed -n '11,$p' list.txt | cut -d'|' -f1)
+	for old in "$oldItems"; do
+		echo "deleting : _$old.mp4"
+		rm "_$old.mp4"
+	done
+
+	sed -i '11,$d' list.txt
+	
 	cat > $index_page << EOF
 <html>
 <head>
