@@ -68,7 +68,7 @@ for folder in $channels; do
 	cd $video_dir
 
 	oldItems=$(sed -n '11,$p' list.txt | cut -d'|' -f1)
-	for old in "$oldItems"; do
+	for old in $oldItems; do
 		echo "deleting : _$old.mp4"
 		rm "_$old.mp4"
 	done
