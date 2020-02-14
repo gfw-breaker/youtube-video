@@ -43,7 +43,7 @@ while read line; do
 		wget https://img.youtube.com/vi/$vid/hqdefault.jpg -O _$vid.jpg
 	fi
 
-	sed -e "s/videoFile/$vname.mp4/g" -e "s/videoFolder/$folder/g" \
+	sed -e "s/videoFile/$vname/g" -e "s/videoFolder/$folder/g" \
 		-e "s/videoTitle/$title/g" -e "s/proxy_server_ip/$ip/g" \
 		 /root/youtube-video/template.html > $video_dir/$vname.html 
 
@@ -71,8 +71,7 @@ for folder in $channels; do
 	oldItems=$(sed -n '11,$p' list.txt | cut -d'|' -f1)
 	for old in $oldItems; do
 		echo "deleting : _$old.mp4"
-		rm "_$old.mp4"
-		rm "_$old.jpg"
+		rm "_$old.*"
 	done
 
 	sed -i '11,$d' list.txt
