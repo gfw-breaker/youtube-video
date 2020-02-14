@@ -40,7 +40,7 @@ while read line; do
 		echo "$vname.mp4 exists"
 	else
 		youtube-dl -o "_%(id)s.%(ext)s" -f 18 -- $id
-		wget https://img.youtube.com/vi/$vid/hqdefault.jpg -O _$vid.jpg
+		wget https://img.youtube.com/vi/$id/hqdefault.jpg -O _$id.jpg
 	fi
 
 	sed -e "s/videoFile/$vname/g" -e "s/videoFolder/$folder/g" \
