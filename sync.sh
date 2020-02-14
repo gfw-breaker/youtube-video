@@ -40,6 +40,7 @@ while read line; do
 		echo "$vname.mp4 exists"
 	else
 		youtube-dl -o "_%(id)s.%(ext)s" -f 18 -- $id
+		wget https://img.youtube.com/vi/$vid/hqdefault.jpg -O _$vid.jpg
 	fi
 
 	sed -e "s/videoFile/$vname.mp4/g" -e "s/videoFolder/$folder/g" \
@@ -71,6 +72,7 @@ for folder in $channels; do
 	for old in $oldItems; do
 		echo "deleting : _$old.mp4"
 		rm "_$old.mp4"
+		rm "_$old.jpg"
 	done
 
 	sed -i '11,$d' list.txt
