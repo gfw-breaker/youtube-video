@@ -71,7 +71,9 @@ for folder in $channels; do
 	oldItems=$(sed -n '11,$p' list.txt | cut -d'|' -f1)
 	for old in $oldItems; do
 		echo "deleting : _$old.mp4"
-		rm "_$old.*"
+		rm _$old.mp4
+		rm _$old.jpg
+		rm _$old.html
 	done
 
 	sed -i '11,$d' list.txt
