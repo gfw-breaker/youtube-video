@@ -97,3 +97,6 @@ sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html >> $index_page
 
 done
 
+# tv page
+/root/youtube-video/tv.sh
+
