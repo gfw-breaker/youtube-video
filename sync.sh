@@ -44,7 +44,7 @@ while read line; do
 	fi
 
 	sed -e "s/videoFile/$vname/g" -e "s/videoFolder/$folder/g" \
-		-e "s/videoTitle/$title/g" -e "s/proxy_server_ip/$ip/g" \
+		-e "s/videoTitle/$title/g" -e "s/proxy_server_ip/$ip/g" -e "s/data_server/$data_server/g" \
 		 /root/youtube-video/template.html > $video_dir/$vname.html 
 
 	grep -- $id list.txt > /dev/null 2>&1
