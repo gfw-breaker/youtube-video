@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ip=45.32.178.68
+ip=104.238.184.106
 
 page=/usr/share/nginx/html/index.html
 
