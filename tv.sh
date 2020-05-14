@@ -2,7 +2,7 @@
 
 #ip=104.238.184.106
 #ip=95.179.231.95
-ip=45.76.133.116
+ip=141.164.41.95
 
 page=/usr/share/nginx/html/index.html
 
