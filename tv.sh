@@ -2,7 +2,8 @@
 
 #ip=104.238.184.106
 #ip=95.179.231.95
-ip=141.164.41.95
+#ip=141.164.41.95
+ip=141.164.46.215
 
 page=/usr/share/nginx/html/index.html
 yt=/usr/share/nginx/html/youtube.html
