@@ -7,6 +7,8 @@ start=$(head -n 1 /var/log/nginx/access.log | awk '{print $4" "$5}')
 cdate=$(echo $start | cut -c2- | cut -d':' -f1 | sed 's#/#-#g')
 echo $cdate
 
+cd /root/youtube-video
+
 grep jpg /var/log/nginx/access.log | awk '{ print $7 }' | grep '/_'  | cut -d'/' -f2 | sort  | uniq -c | sort -nr > vv.txt
 
 cat > $page << EOF
