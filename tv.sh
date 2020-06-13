@@ -1,11 +1,13 @@
 #!/bin/bash
 
-#ip=104.238.184.106
-#ip=95.179.231.95
-#ip=141.164.41.95
-#ip=141.164.46.215
-#ip=167.71.119.103
-ip=141.164.45.19
+
+ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
+if [ -z $ip ]; then
+	ip=$(ifconfig | grep "broadcast" | awk '{print $2}')
+fi
+
+
+#ip=141.164.45.19
 
 page=/usr/share/nginx/html/index.html
 yt=/usr/share/nginx/html/youtube.html
