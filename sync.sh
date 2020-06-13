@@ -23,7 +23,7 @@ git pull
 
 ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
 if [ -z $ip ]; then
-	ip=$(ifconfig | grep "broadcast" | awk '{print $2}')
+	ip=$(/sbin/ifconfig | grep "broadcast" | awk '{print $2}')
 fi
 
 ts=$(date '+%m%d%H')
