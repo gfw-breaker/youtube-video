@@ -87,6 +87,11 @@ for folder in $channels; do
 <head>
 <meta charset="utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<style>
+body {
+	margin: 10px;
+}
+</style>
 </head>
 <body>
 EOF
