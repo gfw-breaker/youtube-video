@@ -90,14 +90,14 @@ for folder in $channels; do
 <style>
 body {
 	margin: 10px;
-	line-height: 160%;
+	line-height: 140%;
 }
 a {
 	text-decoration: none;
 	padding-top: 60px;
 }
 div {
-	margin-top: 18px;
+	margin-top: 12px;
 }
 </style>
 </style>
