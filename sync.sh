@@ -108,7 +108,7 @@ div {
 <body>
 EOF
 
-sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html >> $index_page
+sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html | grep -v "^#" | sed 's#^#<div>#g' | sed 's#$#</div>#g' >> $index_page
 
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
