@@ -92,6 +92,9 @@ body {
 	margin: 10px;
 	line-height: 240%;
 }
+a {
+	text-decoration: none;
+}
 </style>
 </style>
 </head>
