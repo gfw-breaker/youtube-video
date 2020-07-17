@@ -94,7 +94,6 @@ body {
 }
 a {
 	text-decoration: none;
-	padding-top: 60px;
 }
 a:link {
   color: #3366cc;
