@@ -94,7 +94,7 @@ body {
 }
 a {
 	text-decoration: none;
-	margin-top: 10px;
+	margin-top: 30px;
 }
 </style>
 </style>
