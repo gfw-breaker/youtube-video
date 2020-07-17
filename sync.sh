@@ -90,9 +90,6 @@ for folder in $channels; do
 <style>
 body {
 	margin: 10px;
-}
-a {
-	margin: 60px;
 	line-height: 160%;
 }
 </style>
@@ -106,7 +103,7 @@ sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html >> $index_page
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
 			title=$(echo $video | cut -d'|' -f2)
-			echo "<a href='http://$ip:$server_port/$folder/_$id.html'><b>$title</b></a></br></br>" >> $index_page
+			echo "<a href='http://$ip:$server_port/$folder/_$id.html'><b>$title</b></a></br>" >> $index_page
 	done < list.txt
 
 done
