@@ -90,7 +90,7 @@ for folder in $channels; do
 <style>
 body {
 	margin: 10px;
-	line-height: 200%;
+	line-height: 240%;
 }
 </style>
 </style>
