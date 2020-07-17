@@ -97,7 +97,7 @@ a {
 	padding-top: 60px;
 }
 a:link {
-  color: black;
+  color: #3366cc;
 }
 div {
 	margin-top: 12px;
