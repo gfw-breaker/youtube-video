@@ -106,6 +106,7 @@ div {
 </style>
 </head>
 <body>
+<b>
 EOF
 
 sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html | grep -v "^#" | sed 's#^#<div>#g' | sed 's#$#</div>#g' >> $index_page
@@ -113,9 +114,9 @@ sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html | grep -v "^#" | se
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
 			title=$(echo $video | cut -d'|' -f2)
-			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html'><b>$title</b></a></br></div>" >> $index_page
+			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html'>$title</a></br></div>" >> $index_page
 	done < list.txt
-	echo "</body></html>" >> $index_page
+	echo "</b></body></html>" >> $index_page
 done
 
 # tv page
