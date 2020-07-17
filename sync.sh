@@ -97,6 +97,9 @@ a {
 	text-decoration: none;
 }
 a:link {
+  color: purple;
+}
+a:visited{
   color: #3366cc;
 }
 div {
