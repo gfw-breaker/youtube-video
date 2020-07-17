@@ -97,7 +97,7 @@ a {
 	padding-top: 60px;
 }
 div {
-	margin-top: 30px;
+	margin-top: 18px;
 }
 </style>
 </style>
