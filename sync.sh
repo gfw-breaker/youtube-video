@@ -115,7 +115,7 @@ sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html >> $index_page
 			title=$(echo $video | cut -d'|' -f2)
 			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html'><b>$title</b></a></br></div>" >> $index_page
 	done < list.txt
-	echo "</body></html>"
+	echo "</body></html>" >> $index_page
 done
 
 # tv page
