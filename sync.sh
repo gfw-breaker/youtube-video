@@ -96,6 +96,9 @@ a {
 	text-decoration: none;
 	padding-top: 60px;
 }
+a:link {
+  color: black;
+}
 div {
 	margin-top: 12px;
 }
