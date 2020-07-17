@@ -91,6 +91,7 @@ for folder in $channels; do
 body {
 	margin: 10px;
 	line-height: 140%;
+	background: #faf0e6;
 }
 a {
 	text-decoration: none;
