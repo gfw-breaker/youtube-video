@@ -9,7 +9,7 @@ echo $cdate
 
 cd /root/youtube-video
 
-grep '\.jpg' /var/log/nginx/access.log | awk '{ print $1, $7' | sort | uniq | grep '/_'  | cut -d'/' -f2 | sort  | uniq -c | sort -nr > vv.txt
+grep '\.jpg' /var/log/nginx/access.log | awk '{ print $1, $7 }' | sort | uniq | grep '/_'  | cut -d'/' -f2 | sort  | uniq -c | sort -nr > vv.txt
 
 cat > $page << EOF
 <meta charset="UTF-8">
