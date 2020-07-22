@@ -121,7 +121,7 @@ EOF
 	while read news; do
 			id=$(echo $news | cut -d'.' -f1)
 			title=$(echo $news | cut -d'.' -f2)
-			echo "<div><a href='http://$ip:10000/videos/news/$id.html'>$title</a></br></div>" >> $index_page
+			echo "<div><a href='http://$ip:10000/videos/news/$id.html'>📍 $title</a></br></div>" >> $index_page
 	done < hot.txt	
 
 	while read video; do
