@@ -65,6 +65,9 @@ while read line; do
 done < $csv
 
 
+wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
+sed -n '2,3p' news.txt > hot.txt
+
 channels=$(ls -l $nginx_dir | grep ^d | awk '{ print $9 }')
 
 for folder in $channels; do
@@ -114,9 +117,6 @@ EOF
 
 	sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html \
 		| grep -v "^#" | sed 's#^#<div>#g' | sed 's#$#</div>#g' >> $index_page
-
-	wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
-	sed -n '2,3p' news.txt > hot.txt
 
 	while read news; do
 			id=$(echo $news | cut -d'.' -f1)
