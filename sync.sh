@@ -121,9 +121,9 @@ EOF
 	done < /root/youtube-video/hot.txt	
 
 	abc=$(curl -s https://raw.githubusercontent.com/begood0513/goodnews/master/indexes/ABC.csv | head -n 1)
-	linkUrl=$(echo $abc | cut -d',' -f1 | sed "s#https://www.ntdtv.com#http://ip:8808#" | sed "s#https://www.epochtimes.com#http://ip:10080#")
+	linkUrl=$(echo $abc | cut -d',' -f1 | sed "s#https://www.ntdtv.com#http://$ip:8808#" | sed "s#https://www.epochtimes.com#http://$ip:10080#")
 	linkTitle=$(echo $abc | cut -d',' -f2)
-	echo "<div><a href='$linkUrl'>🔥 $tlinkTitle</a></br></div>" >> $index_page
+	echo "<div><a href='$linkUrl'>🔥 $tinkTitle</a></br></div>" >> $index_page
 
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
