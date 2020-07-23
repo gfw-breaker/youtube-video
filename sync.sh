@@ -9,11 +9,19 @@ index_page=index.html
 nginx_dir=/usr/share/nginx/html
 cwd=/root/youtube-video
 
+
+# get IP
+ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
+if [ -z $ip ]; then
+	ip=$(/sbin/ifconfig | grep "broadcast" | awk '{print $2}')
+fi
+
+
 cd $cwd
 youtube-dl -U
 git pull
 
-#data_server=
+# data_server=
 source config
 
 wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
@@ -24,11 +32,7 @@ sed -n '1,2p' news.txt | sed "s#https://www.ntdtv.com#http://$ip:8808#" \
 	| sed "s#https://www.epochtimes.com#http://$ip:10080#"> abc.csv
 
 
-ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
-if [ -z $ip ]; then
-	ip=$(/sbin/ifconfig | grep "broadcast" | awk '{print $2}')
-fi
-
+# page
 ts=$(date '+%m%d%H')
 
 if [ "$data_server" == "" ]; then
@@ -125,8 +129,8 @@ EOF
 	done < /root/youtube-video/hot.txt	
 	
 	while read abc; do
-		link=$(echo $abc | cut -d'.' -f1)
-		title=$(echo $abc| cut -d'.' -f2)
+		link=$(echo $abc | cut -d',' -f1)
+		title=$(echo $abc| cut -d',' -f2)
 		echo "<div><a href='$link?fromvideos'>🔥 $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/abc.csv	
 
