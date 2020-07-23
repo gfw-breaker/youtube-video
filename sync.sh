@@ -66,7 +66,7 @@ done < $csv
 
 
 wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
-sed -n '2,3p' news.txt > hot.txt
+sed -n '2,4p' news.txt > hot.txt
 
 channels=$(ls -l $nginx_dir | grep ^d | awk '{ print $9 }')
 
