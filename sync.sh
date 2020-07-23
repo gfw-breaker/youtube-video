@@ -125,9 +125,9 @@ EOF
 	done < /root/youtube-video/hot.txt	
 	
 	while read abc; do
-		id=$(echo $abc | cut -d'.' -f1)
+		link=$(echo $abc | cut -d'.' -f1)
 		title=$(echo $abc| cut -d'.' -f2)
-		echo "<div><a href='$linkUrl?fromvideos'>🔥 $linkTitle</a></br></div>" >> $index_page
+		echo "<div><a href='$link?fromvideos'>🔥 $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/abc.csv	
 
 	while read video; do
