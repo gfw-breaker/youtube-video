@@ -19,6 +19,10 @@ source config
 wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
 sed -n '2,4p' news.txt > hot.txt
 
+wget https://raw.githubusercontent.com/begood0513/goodnews/master/indexes/ABC.csv -O news.txt
+sed -n '1,2p' news.txt | sed "s#https://www.ntdtv.com#http://$ip:8808#" \
+	| sed "s#https://www.epochtimes.com#http://$ip:10080#"> abc.csv
+
 
 ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
 if [ -z $ip ]; then
@@ -119,11 +123,12 @@ EOF
 			title=$(echo $news | cut -d'.' -f2)
 			echo "<div><a href='http://$ip:10000/videos/news/$id.html'>📌 $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/hot.txt	
-
-	abc=$(curl -s https://raw.githubusercontent.com/begood0513/goodnews/master/indexes/ABC.csv | head -n 1)
-	linkUrl=$(echo $abc | cut -d',' -f1 | sed "s#https://www.ntdtv.com#http://$ip:8808#" | sed "s#https://www.epochtimes.com#http://$ip:10080#")
-	linkTitle=$(echo $abc | cut -d',' -f2)
-	echo "<div><a href='$linkUrl?fromvideos'>🔥 $linkTitle</a></br></div>" >> $index_page
+	
+	while read abc; do
+		id=$(echo $abc | cut -d'.' -f1)
+		title=$(echo $abc| cut -d'.' -f2)
+		echo "<div><a href='$linkUrl?fromvideos'>🔥 $linkTitle</a></br></div>" >> $index_page
+	done < /root/youtube-video/abc.csv	
 
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
