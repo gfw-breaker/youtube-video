@@ -4,23 +4,17 @@
 channel=$1
 csv=videos.txt
 
-data_server=
 server_port=80
 index_page=index.html
 nginx_dir=/usr/share/nginx/html
-
-if [ ! -z $channel ]; then
-	grep $channel $csv > tmp.csv
-	csv=tmp.csv
-fi
-
-baseUrl="https://www.youtube.com"
 cwd=/root/youtube-video
 
 cd $cwd
 youtube-dl -U
 git pull
 
+#data_server=
+source config
 
 wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
 sed -n '2,4p' news.txt > hot.txt
