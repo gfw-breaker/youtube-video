@@ -21,6 +21,11 @@ cd $cwd
 youtube-dl -U
 git pull
 
+
+wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
+sed -n '2,4p' news.txt > hot.txt
+
+
 ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
 if [ -z $ip ]; then
 	ip=$(/sbin/ifconfig | grep "broadcast" | awk '{print $2}')
@@ -64,9 +69,6 @@ while read line; do
 
 done < $csv
 
-
-wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
-sed -n '2,4p' news.txt > hot.txt
 
 channels=$(ls -l $nginx_dir | grep ^d | awk '{ print $9 }')
 
@@ -122,7 +124,7 @@ EOF
 			id=$(echo $news | cut -d'.' -f1)
 			title=$(echo $news | cut -d'.' -f2)
 			echo "<div><a href='http://$ip:10000/videos/news/$id.html'>📌 $title</a></br></div>" >> $index_page
-	done < hot.txt	
+	done < /root/youtube-video/hot.txt	
 
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
