@@ -123,8 +123,8 @@ EOF
 		| grep -v "^#" | sed 's#^#<div>#g' | sed 's#$#</div>#g' >> $index_page
 
 	while read news; do
-			id=$(echo $news | cut -d'.' -f1)
-			title=$(echo $news | cut -d'.' -f2)
+			id=$(echo $news | cut -d',' -f1)
+			title=$(echo $news | cut -d',' -f2)
 			echo "<div><a href='http://$ip:10000/videos/news/$id.html'>📌 $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/hot.txt	
 	
