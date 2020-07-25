@@ -12,7 +12,7 @@ fi
 page=/usr/share/nginx/html/index.html
 yt=/usr/share/nginx/html/youtube.html
 
-sed -i "s#http.*m3u8#http://$ip:8009/cn/live800/playlist.m3u8#" $page
+#sed -i "s#http.*m3u8#http://$ip:8009/cn/live800/playlist.m3u8#" $page
 
 cd /root/youtube-video
 
