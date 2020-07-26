@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # author: gfw-breaker
 
 channel=$1
