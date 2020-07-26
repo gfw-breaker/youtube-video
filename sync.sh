@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 # author: gfw-breaker
 
 channel=$1
@@ -9,6 +9,7 @@ index_page=index.html
 nginx_dir=/usr/share/nginx/html
 cwd=/root/youtube-video
 
+ts=$(date "+%m%d%H%m")
 
 # get IP
 ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
@@ -125,19 +126,19 @@ EOF
 	while read abc; do
 		link=$(echo $abc | cut -d',' -f1)
 		title=$(echo $abc| cut -d',' -f2)
-		echo "<div><a href='$link?fromvideos'>ðŸ”¥ $title</a></br></div>" >> $index_page
+		echo "<div><a href='$link?ts=$ts&fromvideos'>í ½í´¥ $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/abc.csv	
 
 	while read news; do
 			id=$(echo $news | cut -d',' -f1)
 			title=$(echo $news | cut -d',' -f2)
-			echo "<div><a href='http://$ip:10000/videos/news/$id.html'>ðŸ“Œ $title</a></br></div>" >> $index_page
+			echo "<div><a href='http://$ip:10000/videos/news/$id.html?ts=$ts'>í ½í³Œ $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/hot.txt	
 	
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
 			title=$(echo $video | cut -d'|' -f2)
-			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html'>$title</a></br></div>" >> $index_page
+			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html?ts=$ts'>$title</a></br></div>" >> $index_page
 	done < list.txt
 	echo "</b></body></html>" >> $index_page
 done
