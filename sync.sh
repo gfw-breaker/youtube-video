@@ -126,13 +126,13 @@ EOF
 	while read abc; do
 		link=$(echo $abc | cut -d',' -f1)
 		title=$(echo $abc| cut -d',' -f2)
-		echo "<div><a href='$link?ts=$ts&fromvideos'>í ½í´¥ $title</a></br></div>" >> $index_page
+		echo "<div><a href='$link?ts=$ts&fromvideos'>ðŸ”¥ $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/abc.csv	
 
 	while read news; do
 			id=$(echo $news | cut -d',' -f1)
 			title=$(echo $news | cut -d',' -f2)
-			echo "<div><a href='http://$ip:10000/videos/news/$id.html?ts=$ts'>í ½í³Œ $title</a></br></div>" >> $index_page
+			echo "<div><a href='http://$ip:10000/videos/news/$id.html?ts=$ts'>ðŸ“Œ $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/hot.txt	
 	
 	while read video; do
