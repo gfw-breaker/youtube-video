@@ -25,11 +25,11 @@ git pull
 source config
 
 wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
-sed -n '2,4p' news.txt > hot.txt
+sed -n '2,4p' news.txt | tac > hot.txt
 
 wget https://raw.githubusercontent.com/begood0513/goodnews/master/indexes/ABC.csv -O news.txt
 sed -n '1,3p' news.txt | sed "s#https://www.ntdtv.com#http://$ip:8808#" \
-	| sed "s#https://www.epochtimes.com#http://$ip:10080#"> abc.csv
+	| sed "s#https://www.epochtimes.com#http://$ip:10080#" | tac > abc.csv
 
 
 # page
