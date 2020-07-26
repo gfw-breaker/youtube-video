@@ -122,18 +122,17 @@ EOF
 	sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html \
 		| grep -v "^#" | sed 's#^#<div>#g' | sed 's#$#</div>#g' >> $index_page
 
+	while read abc; do
+		link=$(echo $abc | cut -d',' -f1)
+		title=$(echo $abc| cut -d',' -f2)
+		echo "<div><a href='$link?fromvideos'>🔥 $title</a></br></div>" >> $index_page
+
 	while read news; do
 			id=$(echo $news | cut -d',' -f1)
 			title=$(echo $news | cut -d',' -f2)
 			echo "<div><a href='http://$ip:10000/videos/news/$id.html'>📌 $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/hot.txt	
 	
-	while read abc; do
-		link=$(echo $abc | cut -d',' -f1)
-		title=$(echo $abc| cut -d',' -f2)
-		echo "<div><a href='$link?fromvideos'>🔥 $title</a></br></div>" >> $index_page
-	done < /root/youtube-video/abc.csv	
-
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
 			title=$(echo $video | cut -d'|' -f2)
