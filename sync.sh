@@ -34,7 +34,7 @@ sed -n '1,3p' news.txt | sed "s#https://www.ntdtv.com#http://$ip:8808#" \
 
 
 # page
-ts=$(date '+%m%d%H')
+#ts=$(date '+%m%d%H')
 
 if [ "$data_server" == "" ]; then
 	data_server=$ip
