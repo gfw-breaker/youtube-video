@@ -126,7 +126,7 @@ EOF
 	while read abc; do
 		link=$(echo $abc | cut -d',' -f1)
 		title=$(echo $abc| cut -d',' -f2)
-		echo "<div><a href='$link?ts=$ts&fromvideos'>🔥 $title</a></br></div>" >> $index_page
+		echo "<div><a href='$link?fromvideos'>🔥 $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/abc.csv	
 
 	while read news; do
@@ -138,7 +138,7 @@ EOF
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
 			title=$(echo $video | cut -d'|' -f2)
-			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html?ts=$ts'>$title</a></br></div>" >> $index_page
+			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html'>$title</a></br></div>" >> $index_page
 	done < list.txt
 	echo "</b></body></html>" >> $index_page
 done
