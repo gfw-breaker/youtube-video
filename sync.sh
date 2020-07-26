@@ -126,6 +126,7 @@ EOF
 		link=$(echo $abc | cut -d',' -f1)
 		title=$(echo $abc| cut -d',' -f2)
 		echo "<div><a href='$link?fromvideos'>🔥 $title</a></br></div>" >> $index_page
+	done < /root/youtube-video/abc.csv	
 
 	while read news; do
 			id=$(echo $news | cut -d',' -f1)
