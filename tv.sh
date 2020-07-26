@@ -35,9 +35,11 @@ a {
 <a href='/'>新唐人电视直播</a><br/>
 EOF
 
+ts=$(date "+%m%d%H%m")
+
 while read line ; do
 	title=$(echo $line | cut -d',' -f1)
 	folder=$(echo $line | cut -d',' -f3)
-	echo "<a href='/$folder/'>$title</a><br/>" >> $yt
+	echo "<a href='/$folder/?ts=$ts'>$title</a><br/>" >> $yt
 done < channels.csv
 
