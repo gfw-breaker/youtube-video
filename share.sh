@@ -33,7 +33,7 @@ while read line; do
 	total=$(($total + $count))
 
 	title=$(grep $key channels.csv | cut -d',' -f1)
-	echo "<tr><td><a href='$key' target='_blank' style='text-decoration:blink;'>$key</td<td>$count</td></tr>" >> $page	
+	echo "<tr><td><a href='$key' target='_blank' style='text-decoration:blink;'>$key</td><td>$count</td></tr>" >> $page	
 done < ll.txt
 
 sed -i "s/total_count/$total/" $page
