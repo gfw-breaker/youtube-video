@@ -17,11 +17,10 @@ th, td {
 }
 </style>
 <b>
-开始于： $start <br/>
 观看量： total_count
 </b><br/><br/>
 <table border='1px' cellspacing='0'>
-<tr><th>频道名称</th><th>观看量</th></tr>
+<tr><th>分享链接</th><th>分享量</th></tr>
 
 EOF
 
