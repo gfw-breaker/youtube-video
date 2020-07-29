@@ -37,4 +37,6 @@ done < ll.txt
 
 sed -i "s/total_count/$total/" $page
 
+head -n 10 ll.txt
+
 
