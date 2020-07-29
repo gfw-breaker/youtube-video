@@ -3,7 +3,7 @@
 baseDir=/usr/share/nginx/html
 page=$baseDir/share.html
 
-egrep "singlemessage|groupmessage" /var/log/nginx/access.log  | awk '{ print $1","$7 }' | cut -d'?' -f1 | sed 's/"//g' | grep -v ',-' | sort | uniq | cut -d',' -f2 | sort | uniq -c | sort -nr > ll.txt
+egrep "singlemessage|groupmessage" /var/log/nginx/access.log  | awk '{ print $1","$7 }' | cut -d'?' -f1 | sed 's/"//g' | grep 'htm' | sort | uniq | cut -d',' -f2 | sort | uniq -c | sort -nr > ll.txt
 
 cat > $page << EOF
 <meta charset="UTF-8">
