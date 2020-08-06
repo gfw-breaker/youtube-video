@@ -33,9 +33,9 @@ a {
 <br/>
 <b>
 <a href='/'>新唐人电视直播</a><br/>
-<a href='http://$ip:10000/videos/res2/djy-news/'>大紀元新聞網</a><br/>
-<a href='http://$ip:10000/videos/res2/ntd-news/'>新唐人電視臺</a><br/>
-<a href='http://$ip:10000/videos/res2/soh-news/'>希望之聲時事熱點</a><br/>
+<a href='http://$ip:10000/videos/res2/djy-news/'>大紀元新聞網YouTube频道</a><br/>
+<a href='http://$ip:10000/videos/res2/ntd-news/'>新唐人電視臺YouTube频道</a><br/>
+<a href='http://$ip:10000/videos/res2/soh-news/'>希望之聲時事熱點YouTube频道</a><br/>
 
 EOF
 
