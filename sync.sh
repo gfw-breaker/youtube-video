@@ -140,6 +140,10 @@ EOF
 			echo "<div><a href='http://$ip:10000/videos/news/$id.html?ts=$ts'>📌 $title</a></br></div>" >> $index_page
 	done < /root/youtube-video/hot.txt	
 	
+	cat >> $index_page <<EOF
+<div>������ YouTube新闻频道：<a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人电视台 </a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻网</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻 </a></div>
+EOF
+
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
 			title=$(echo $video | cut -d'|' -f2)
