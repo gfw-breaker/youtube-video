@@ -141,7 +141,7 @@ EOF
 	done < /root/youtube-video/hot.txt	
 	
 	cat >> $index_page <<EOF
-<div>🔥 YouTube新闻频道：<a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻频道 </a></div>
+<div>🔥 YouTube新闻频道：<a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/truth/'>真相传媒频道</a></div>
 EOF
 
 	while read video; do
