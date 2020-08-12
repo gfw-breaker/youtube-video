@@ -142,6 +142,7 @@ EOF
 	
 	cat >> $index_page <<EOF
 <div>🔥 YouTube新闻频道：<a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/truth/'>真相传媒频道</a></div>
+<div>🎙 希望之声广播：<a href='http://$data_server:8204/soh-live'>中国广播台</a>&nbsp; |&nbsp; <a href='http://$data_server:8204/bayvoice'> 美国联播台</a>&nbsp; |&nbsp; <a href='http://$data_server:8204/SYDNEY'>澳洲台</a>&nbsp; |&nbsp; <a href='http://$data_server:10000/SF969'>粤语台</a></div>
 EOF
 
 	while read video; do
