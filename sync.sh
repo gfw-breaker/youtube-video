@@ -141,8 +141,7 @@ EOF
 	done < /root/youtube-video/hot.txt	
 	
 	cat >> $index_page <<EOF
-<div>🔥 YouTube新闻频道：<a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/truth/'>真相传媒频道</a></div>
-<div>🔊 希望之声广播：<a href='http://$ip:8204/soh-live' target='_blank'>中国广播台</a>&nbsp; |&nbsp; <a href='http://$ip:8204/bayvoice' target='_blank'> 美国联播台</a>&nbsp; |&nbsp; <a href='http://$ip:8204/SYDNEY' target='_blank'>澳洲台</a>&nbsp; |&nbsp; <a href='http://$ip:8204/SF969' target='_blank'>粤语台</a></div>
+<div>🔥 YouTube新闻频道：<a href='http://$ip/radio.html'> 希望之声广播</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/truth/'>真相传媒</a></div>
 EOF
 
 	while read video; do
