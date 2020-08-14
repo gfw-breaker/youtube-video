@@ -78,7 +78,9 @@ while read line; do
 done < $csv
 
 
-channels=$(ls -l $nginx_dir | grep ^d | awk '{ print $9 }')
+#channels=$(ls -l $nginx_dir | grep ^d | awk '{ print $9 }')
+
+channels=$(cat /root/youtube-youtube/channels.csv | awk -F',' '{ print $3}')
 
 for folder in $channels; do
 	video_dir=$nginx_dir/$folder
