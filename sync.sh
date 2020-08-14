@@ -80,7 +80,7 @@ done < $csv
 
 #channels=$(ls -l $nginx_dir | grep ^d | awk '{ print $9 }')
 
-channels=$(cat /root/youtube-videos/channels.csv | awk -F',' '{ print $3}')
+channels=$(cat /root/youtube-video/channels.csv | awk -F',' '{ print $3}')
 
 for folder in $channels; do
 	video_dir=$nginx_dir/$folder
