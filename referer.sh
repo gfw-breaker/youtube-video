@@ -1,12 +1,23 @@
 #!/bin/bash
 
-c1=$(grep fromvideos /var/log/nginx/access.log | grep -v " 200 0 " | grep "GET /gb/" | awk '{ print $1 }' | sort | uniq | wc -l)
+key=$1
 
-c2=$(egrep "singlemessage|groupmessage" /var/log/nginx/access.log  | grep -v " 200 0 " | awk '{ print $1 }' | sort | uniq  | wc -l)
+if [ $# -eq 0 ]; then
+	key="200"
+fi
 
-c3=$(egrep "nsukey" /var/log/nginx/access.log | grep -v " 200 0 " | awk '{ print $1 }' | sort | uniq  | wc -l)
+function filter(){
+	grep $key /var/log/nginx/access.log	| grep -v " 200 0 "
+}
 
-c4=$(grep -v '" 403 ' /var/log/nginx/access.log | grep -v " 200 0 " | awk '{ print $1 }' | sort | uniq  | wc -l)
+
+c1=$(filter | grep fromvideos | grep "GET /gb/" | awk '{ print $1 }' | sort | uniq | wc -l)
+
+c2=$(filter | egrep "singlemessage|groupmessage" | awk '{ print $1 }' | sort | uniq  | wc -l)
+
+c3=$(filter | egrep "nsukey" | awk '{ print $1 }' | sort | uniq  | wc -l)
+
+c4=$(filter | grep -v '" 403 ' | awk '{ print $1 }' | sort | uniq  | wc -l)
 
 echo "From YouTube : $c1"
 echo "From WeChat  : $c2"
