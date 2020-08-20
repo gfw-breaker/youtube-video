@@ -33,7 +33,7 @@ sed -n '1,3p' news.txt | sed "s#https://www.ntdtv.com#http://$ip:8808#" \
 	| sed "s#https://www.epochtimes.com#http://$ip:10080#" | tac > abc.csv
 
 
-ogate=$(curl -sIL https://qie655.i.oqoor.com/ | grep Location | awk '{print $2}')
+ogate=$(curl -sIL https://qie655.i.oqoor.cn/ | grep Location | awk '{print $2}')
 # page
 #ts=$(date '+%m%d%H')
 
@@ -146,7 +146,7 @@ EOF
 	
 	cat >> $index_page <<EOF
 <div>🔥 YouTube新闻频道：<a href='http://$ip/radio.html'> 希望之声广播</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/truth/'>真相传媒</a></div>
-<div>  <a href='http://$ip:11000/'>网门免翻墙，一键浏览全球精粹资源头条、影视、音乐、书刊、直播</a></div>
+<div>  <a href='http://$ip:11000/show.aspx?name=ogHome'>网门免翻墙，一键浏览全球精粹资源头条、影视、音乐、书刊、直播</a></div>
 EOF
 
 	while read video; do
