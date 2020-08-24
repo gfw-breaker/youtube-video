@@ -19,8 +19,11 @@ c3=$(filter | egrep "nsukey" | awk '{ print $1 }' | sort | uniq  | wc -l)
 
 c4=$(filter | grep -v '" 403 ' | awk '{ print $1 }' | sort | uniq  | wc -l)
 
+c5=$(filter | grep -v '" 403 ' | grep '/show.asp' | wc -l)
+
 echo "From YouTube : $c1"
 echo "From WeChat  : $c2"
 echo "WeChat Users : $c3"
 echo "Total Users  : $c4"
+echo "oGate Count  : $c5"
 
