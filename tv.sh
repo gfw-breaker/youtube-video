@@ -1,9 +1,9 @@
 #!/bin/bash
 
 
-ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
+ip=$(/sbin/ifconfig eth0 | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
 if [ -z $ip ]; then
-	ip=$(/sbin/ifconfig | grep "broadcast" | awk '{print $2}')
+	ip=$(/sbin/ifconfig eth0 | grep "broadcast" | awk '{print $2}')
 fi
 
 
