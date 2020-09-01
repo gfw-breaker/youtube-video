@@ -19,7 +19,7 @@ c3=$(filter | egrep "nsukey" | awk '{ print $1 }' | sort | uniq  | wc -l)
 
 c4=$(filter | grep -v '" 403 ' | awk '{ print $1 }' | sort | uniq  | wc -l)
 
-c5=$(filter | grep -v '" 403 ' | grep -v '" 499' | grep 'GET /show.asp' | grep -v '=og' | wc -l)
+c5=$(filter | grep -v '" 403 ' | grep -v '" 499' | grep 'GET /show.asp' | grep -v 'GET /show.aspx?name=og' | wc -l)
 
 echo "From YouTube : $c1"
 echo "From WeChat  : $c2"
