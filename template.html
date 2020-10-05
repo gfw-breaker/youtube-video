@@ -90,4 +90,14 @@ p b {
 </p>
 </center>
 </body>
+
+<script>
+var ts = Date.parse(new Date());
+
+var x = document.getElementsByTagName("video");
+for (var i = 0; i < x.length; i++) {
+  	x[i].poster = x[i].poster + '?' + ts;
+}
+</script>
+
 </html>
