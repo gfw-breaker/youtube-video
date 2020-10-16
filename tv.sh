@@ -51,7 +51,7 @@ done < channels.csv
 
 serverName=$(hostname)
 
-wget https://raw.githubusercontent.com/gfw-breaker/banned-news3/master/pages/link5.md -O target.md
+wget https://raw.githubusercontent.com/gfw-breaker/banned-news3/master/pages/link6.md -O target.md
 
 targetIp=$(cat target.md  | sed -n 5p | awk -F'/' '{ print $3 }' | cut -d':' -f1)
 redirectIp=$(cat redirect)
