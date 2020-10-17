@@ -65,7 +65,7 @@ fi
 
 if [[ $serverName =~ 'ogate' ]]; then
 	cd /root/open-proxy
-	./redirect.sh $redirectIp
+	#./redirect.sh $redirectIp
 fi
 
 
