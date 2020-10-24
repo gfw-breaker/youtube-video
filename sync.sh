@@ -103,6 +103,7 @@ for folder in $channels; do
 <html>
 <head>
 <meta charset="utf-8" /> 
+<meta name="referrer" content="unsafe-url">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <style>
 body {
