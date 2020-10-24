@@ -124,7 +124,6 @@ div {
 	margin-top: 12px;
 }
 </style>
-</style>
 </head>
 <body>
 <b>
