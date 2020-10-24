@@ -135,7 +135,7 @@ EOF
 	while read abc; do
 		link=$(echo $abc | cut -d',' -f1)
 		title=$(echo $abc| cut -d',' -f2)
-		echo "<div><a href='$link?fromvideos'>🔥 $title</a></br/></div>" >> $index_page
+		echo "<div><a href='$link?fromvideos'>🔥 $title</a><br/></div>" >> $index_page
 	done < /root/youtube-video/abc.csv	
 
 	while read news; do
@@ -146,13 +146,13 @@ EOF
 	
 	cat >> $index_page <<EOF
 <div>🔥 视频新闻：<a href='http://$ip/radio.html'> 希望之声广播</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/truth/'>真相传媒</a></div>
-<div>  <a href='http://$ip:11000/show.aspx?name=og精选~mark'>网门免翻墙，一键浏览全球精粹资源 头条、影视、音乐、书刊、直播</a></div>
+<div><a href='http://$ip:11000/show.aspx?name=og精选~mark'>网门免翻墙，一键浏览全球精粹资源 头条、影视、音乐、书刊、直播</a></div>
 EOF
 
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
 			title=$(echo $video | cut -d'|' -f2)
-			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html'>$title</a></br></div>" >> $index_page
+			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html'>$title</a><br/></div>" >> $index_page
 	done < list.txt
 	echo "</b></body></html>" >> $index_page
 done
