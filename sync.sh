@@ -89,7 +89,7 @@ for folder in $channels; do
 
 	cd $video_dir
 
-	oldItems=$(sed -n '61,$p' list.txt | cut -d'|' -f1)
+	oldItems=$(sed -n '81,$p' list.txt | cut -d'|' -f1)
 	for old in $oldItems; do
 		echo "deleting : _$old.mp4"
 		rm _$old.mp4
@@ -97,7 +97,7 @@ for folder in $channels; do
 		rm _$old.html
 	done
 
-	sed -i '61,$d' list.txt
+	sed -i '81,$d' list.txt
 	
 	cat > $index_page << EOF
 <html>
