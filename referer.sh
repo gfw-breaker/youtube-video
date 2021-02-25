@@ -17,7 +17,7 @@ c2=$(filter | egrep "singlemessage|groupmessage" | awk '{ print $1 }' | sort | u
 
 c3=$(filter | egrep "nsukey" | awk '{ print $1 }' | sort | uniq  | wc -l)
 
-c4=$(filter | grep -v '" 403 ' | awk '{ print $1 }' | sort | uniq  | wc -l)
+c4=$(filter | grep '"GET /' | grep -v '" 403 ' | awk '{ print $1 }' | sort | uniq  | wc -l)
 
 c5=$(filter | grep -v '" 403 ' | grep -v '" 499' | grep 'GET /show.htm' | grep -v 'GET /show.aspx?name=og' | grep -v get_oopipe | wc -l)
 
