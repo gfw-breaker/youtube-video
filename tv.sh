@@ -32,8 +32,9 @@ a {
 <body>
 <br/>
 <b>
+<!--
 <a href='http://$ip:11000/show.aspx?name=ogHome'>网门免翻墙，一键浏览全球精粹资源 头条、影视、音乐、书刊、直播</a><br/>
-
+-->
 EOF
 
 #<a href='http://$ip:10000/videos/res2/djy-news/'>大紀元新聞網YouTube频道</a><br/>
