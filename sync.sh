@@ -156,7 +156,7 @@ EOF
 	while read video; do
 			id=$(echo $video | cut -d'|' -f1)
 			title=$(echo $video | cut -d'|' -f2)
-			echo "<div><a href='http://$ip:$server_port/$folder/_$id.html'>$title</a><br/></div>" >> $index_page
+			echo "<div><a href='/$folder/_$id.html'>$title</a><br/></div>" >> $index_page
 	done < list.txt
 	echo "</b></body></html>" >> $index_page
 done
