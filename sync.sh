@@ -146,7 +146,7 @@ EOF
 	
 	cat >> $index_page <<EOF
 <div>🔥 视频新闻：<a href='http://$ip/radio.html'> 希望之声广播</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/djy-news/'>大纪元新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/ntd-news/'> 新唐人新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/soh-news/'>希望看新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/truth/'>真相传媒</a></div>
-<div><a href='http://$ip:11000/show.htm#ogHome'>网门免翻墙，一键浏览全球精粹资源</a>（目前网站后台出现故障，<href="https://github.com/gfw-breaker/nogfw/">请下载手机应用程序</a>）</div>
+<div><a href='http://$ip:11000/show.htm#ogHome'>网门免翻墙，一键浏览全球精粹资源</a>（目前网站后台出现故障，<a href="https://github.com/gfw-breaker/nogfw/">请下载手机应用程序</a>）</div>
 <!--
 <div style="color:red">部分视频无法正常播放，正尝试解决后台服务器问题，请朋友们耐心等候</div>
 -->
