@@ -79,6 +79,22 @@ while read line; do
 done < $csv
 
 
+while read line; do
+	folder=$(echo $line | cut -d'|' -f1)
+	url=$(echo $line | cut -d'|' -f2)
+	
+	video_dir=$nginx_dir/$folder
+	mkdir -p $video_dir; cd $video_dir
+
+	iname=index.jpg
+	if [ -f $iname ]; then
+		echo "$folder/$iname exists"
+	else
+		wget $url -O $iname
+	fi
+done < $cwd/icons.txt
+
+
 #channels=$(ls -l $nginx_dir | grep ^d | awk '{ print $9 }')
 
 channels=$(cat /root/youtube-video/channels.csv | awk -F',' '{ print $3}')
