@@ -21,21 +21,33 @@ cat > $yt << EOF
 <head>
 <meta charset="utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title> YouTube 节目列表 </title>
+<title> YouTube 热门节目 </title>
 <style>
-a {
-	margin: 60px;
-	line-height: 160%;
+.channel {
+    border-bottom: #80808038;
+    height: 30px;
+    border-bottom-style: groove;
+    margin-bottom: 1px;
+	font-size: large;
+}
+
+.icon {
+	height: 30px;
+	float: left;
+}
+
+.desc {
+	padding-left: 10px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+}
+img {
+	height: 30px;
+	width: 30px;
 }
 </style>
 </head>
-<body>
-<br/>
-<b>
-<!--
-<a href='http://$ip:11000/show.aspx?name=ogHome'>网门免翻墙，一键浏览全球精粹资源 头条、影视、音乐、书刊、直播</a><br/>
--->
-<a href='/'>新唐人电视直播</a><br/>
 EOF
 
 #<a href='http://$ip:10000/videos/res2/djy-news/'>大紀元新聞網YouTube频道</a><br/>
@@ -47,7 +59,15 @@ ts=$(date "+%m%d%H%m")
 while read line ; do
 	title=$(echo $line | cut -d',' -f1)
 	folder=$(echo $line | cut -d',' -f3)
-	echo "<a href='/$folder/?ts=$ts'>$title</a><br/>" >> $yt
+	#echo "<a href='/$folder/?ts=$ts'>$title</a><br/>" >> $yt
+cat >> $yt <<EOF
+<div class="channel">
+	<a href="/$folder/?ts=$ts">
+		<div class="icon"><img src="/$folder/index.jpg"/></div>
+		<div class="desc">$title</div>
+	</a>
+</div>
+EOF
 done < channels.csv
 
 
