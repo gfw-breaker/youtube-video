@@ -25,26 +25,26 @@ cat > $yt << EOF
 <style>
 .channel {
     border-bottom: #80808038;
-    height: 30px;
+    height: 40px;
     border-bottom-style: groove;
     margin-bottom: 1px;
 	font-size: large;
 }
 
 .icon {
-	height: 30px;
+	height: 40px;
 	float: left;
 }
 
 .desc {
 	padding-left: 10px;
-	height: 30px;
-	line-height: 30px;
+	height: 40px;
+	line-height: 40px;
 	float: left;
 }
 img {
-	height: 30px;
-	width: 30px;
+	height: 40px;
+	width: 40px;
 }
 </style>
 </head>
