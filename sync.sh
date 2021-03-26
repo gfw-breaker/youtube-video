@@ -161,7 +161,7 @@ EOF
 	done < /root/youtube-video/hot.txt	
 	
 	cat >> $index_page <<EOF
-<div>🔥 视频新闻：<a href='http://$ip/radio.html'> 希望之声广播</a>&nbsp; |&nbsp; <a href='/djy-news/'>大纪元新闻</a>&nbsp; |&nbsp; <a href='/ntd-news/'> 新唐人新闻</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/res2/mh-news/'>今日慧闻</a></div>
+<div>💥 代理网站：<a href='http://proxy_server_ip:8808/gb/'> 新唐人电视台 </a>&nbsp; |&nbsp; <a href='/radio.html'> 希望之声广播</a>&nbsp; |&nbsp; <a href='http://proxy_server_ip:10080/gb/'>大纪元新闻网</a>&nbsp; |&nbsp; <a href='/youtube.html'>YouTube热门</a>&nbsp; |&nbsp; <a href='http://proxy_server_ip:10000/videos/'>翻墙必看</a> </div>
 <div><a href='http://$ip:10000/helloworld/'>下载安装安卓HelloWorld应用程序，免翻墙浏览墙外禁闻、观看热门YouTube节目</a></div>
 <!--
 <div style="color:red">部分视频无法正常播放，正尝试解决后台服务器问题，请朋友们耐心等候</div>
