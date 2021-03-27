@@ -13,14 +13,14 @@ function getSubSet(arr, size) {
 
 
 $.ajax({
-    url:"http://gfw-breaker.win/videos/videos.json",
+    url:"http://gfw-breaker.win/videos/video.json",
     type:"get",
     dataType:'json',
     success:function (json) {
 	subSet = getSubSet(json, 3)
         for(i in subSet) {
 		v = subSet[i]
-		ele = `<div><a href='${v.id}'>📌 ${v.title}</a><br/></div>`
+		ele = `<div><a href='${web}${v.id}'>📌 ${v.title}</a><br/></div>`
 		$("#anchor").after(ele);
 	}
     },
