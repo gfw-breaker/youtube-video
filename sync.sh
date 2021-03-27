@@ -121,6 +121,10 @@ for folder in $channels; do
 <meta charset="utf-8" /> 
 <meta name="referrer" content="unsafe-url">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var web="http://$ip";
+</script>
 <style>
 body {
 	margin: 10px;
@@ -148,19 +152,8 @@ EOF
 	sed "s/proxy_server_ip/$ip/g" /root/youtube-video/links.html \
 		| grep -v "^#" | sed 's#^#<div>#g' | sed 's#$#</div>#g' >> $index_page
 
-	while read abc; do
-		link=$(echo $abc | cut -d',' -f1)
-		title=$(echo $abc| cut -d',' -f2)
-		echo "<div><a href='$link?fromvideos'>🔥 $title</a><br/></div>" >> $index_page
-	done < /root/youtube-video/abc.csv	
-
-	while read news; do
-			id=$(echo $news | cut -d',' -f1)
-			title=$(echo $news | cut -d',' -f2)
-			echo "<div><a href='http://$ip:10000/videos/news/$id.html?ts=$ts'>📌 $title</a><br/></div>" >> $index_page
-	done < /root/youtube-video/hot.txt	
-	
 	cat >> $index_page <<EOF
+<span id='anchor'></span>
 <div>💥 代理网站：<a href='http://proxy_server_ip:8808/gb/'> 新唐人电视台 </a>&nbsp; |&nbsp; <a href='/radio.html'> 希望之声广播</a>&nbsp; |&nbsp; <a href='http://proxy_server_ip:10080/gb/'>大纪元新闻网</a>&nbsp; |&nbsp; <a href='/youtube.html'>YouTube热门</a>&nbsp; |&nbsp; <a href='http://proxy_server_ip:10000/videos/'>翻墙必看</a> </div>
 <div><a href='http://$ip:10000/helloworld/'>下载安装安卓HelloWorld应用程序，免翻墙浏览墙外禁闻、观看热门YouTube节目</a></div>
 <!--
@@ -175,6 +168,7 @@ EOF
 			echo "<div><a href='/$folder/_$id.html'>$title</a><br/></div>" >> $index_page
 	done < list.txt
 	echo "</b></body></html>" >> $index_page
+	cat $cwd/random.js >> $index_page
 done
 
 # tv page
