@@ -25,12 +25,12 @@ git pull
 # data_server=
 source config
 
-wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
-sed -n '2,4p' news.txt | tac > hot.txt
+#wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
+#sed -n '2,4p' news.txt | tac > hot.txt
 
-wget https://raw.githubusercontent.com/begood0513/goodnews/master/indexes/ABC.csv -O news.txt
-sed -n '1,3p' news.txt | sed "s#https://www.ntdtv.com#http://$ip:8808#" \
-	| sed "s#https://www.epochtimes.com#http://$ip:10080#" | tac > abc.csv
+#wget https://raw.githubusercontent.com/begood0513/goodnews/master/indexes/ABC.csv -O news.txt
+#sed -n '1,3p' news.txt | sed "s#https://www.ntdtv.com#http://$ip:8808#" \
+#	| sed "s#https://www.epochtimes.com#http://$ip:10080#" | tac > abc.csv
 
 
 ogate=$(curl -sIL https://qie655.i.oqoor.cn/ | grep Location | awk '{print $2}')
@@ -154,7 +154,7 @@ EOF
 
 	cat >> $index_page <<EOF
 <span id='anchor'></span>
-<div>💥 代理网站：<a href='http://proxy_server_ip:8808/gb/'>新唐人电视台 </a>&nbsp; |&nbsp; <a href='/radio.html'>希望之声广播</a>&nbsp; |&nbsp; <a href='http://proxy_server_ip:10080/gb/'>大纪元新闻网</a>&nbsp; |&nbsp; <a href='/youtube.html'>YouTube频道</a>&nbsp; |&nbsp; <a href='http://proxy_server_ip:10000/videos/news/'>热点视频</a> </div>
+<div>💥 代理网站：<a href='http://p$ip:8808/gb/'>新唐人电视台 </a>&nbsp; |&nbsp; <a href='/radio.html'>希望之声广播</a>&nbsp; |&nbsp; <a href='http://$ip:10080/gb/'>大纪元新闻网</a>&nbsp; |&nbsp; <a href='/youtube.html'>YouTube频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/news/'>热点视频</a> </div>
 <div><a href='http://$ip:10000/helloworld/'>下载安装安卓HelloWorld应用程序，免翻墙浏览墙外禁闻、观看热门YouTube节目</a></div>
 <!--
 <div style="color:red">部分视频无法正常播放，正尝试解决后台服务器问题，请朋友们耐心等候</div>
