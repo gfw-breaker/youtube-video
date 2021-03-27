@@ -168,7 +168,7 @@ EOF
 			echo "<div><a href='/$folder/_$id.html'>$title</a><br/></div>" >> $index_page
 	done < list.txt
 	echo "</b></body></html>" >> $index_page
-	cat $cwd/random.js >> $index_page
+	cat $cwd/random.js | sed "s/gfw-breaker.win/$ip:10000/g" >> $index_page
 done
 
 # tv page
