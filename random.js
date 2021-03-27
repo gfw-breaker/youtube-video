@@ -20,7 +20,7 @@ $.ajax({
 	subSet = getSubSet(json, 3)
         for(i in subSet) {
 		v = subSet[i]
-		ele = `<div><a href='${v.id}'>${v.title}</a><br/></div>`
+		ele = `<div><a href='${v.id}'>📌 ${v.title}</a><br/></div>`
 		$("#anchor").after(ele);
 	}
     },
@@ -37,7 +37,7 @@ $.ajax({
 	subSet = getSubSet(json, 3)
         for(i in subSet) {
 		v = subSet[i]
-		ele = `<div><a href='${web}${v.url}'>${v.title}</a><br/></div>`
+		ele = `<div><a href='${web}${v.url}'>🔥 ${v.title}</a><br/></div>`
 		$("#anchor").after(ele);
 	}
     },
