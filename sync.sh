@@ -1,7 +1,7 @@
 #!/bin/bash
 # author: gfw-breaker
 
-channel=$1
+switch=$1
 csv=videos.txt
 
 server_port=80
@@ -25,15 +25,6 @@ git pull
 # data_server=
 source config
 
-#wget http://gfw-breaker.win/videos/news/readme.txt -O news.txt
-#sed -n '2,4p' news.txt | tac > hot.txt
-
-#wget https://raw.githubusercontent.com/begood0513/goodnews/master/indexes/ABC.csv -O news.txt
-#sed -n '1,3p' news.txt | sed "s#https://www.ntdtv.com#http://$ip:8808#" \
-#	| sed "s#https://www.epochtimes.com#http://$ip:10080#" | tac > abc.csv
-
-
-ogate=$(curl -sIL https://qie655.i.oqoor.cn/ | grep Location | awk '{print $2}')
 # page
 #ts=$(date '+%m%d%H')
 
@@ -58,7 +49,9 @@ while read line; do
 	if [ -f $vname.jpg ]; then
 		echo "$vname.jpg exists"
 	else
-		wget https://img.youtube.com/vi/$id/hqdefault.jpg -O $vname.jpg
+		if [ "$switch" == "" ]; then
+			wget https://img.youtube.com/vi/$id/hqdefault.jpg -O $vname.jpg
+		fi
 	fi
 
 	sed -e "s/videoFile/$vname/g" -e "s/videoFolder/$folder/g" \

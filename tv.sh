@@ -72,23 +72,3 @@ done < channels.csv
 
 echo "<br/><br/><br/><br/>" >> $yt
 
-serverName=$(hostname)
-
-wget https://raw.githubusercontent.com/gfw-breaker/banned-news3/master/pages/link6.md -O target.md
-
-targetIp=$(cat target.md  | sed -n 5p | awk -F'/' '{ print $3 }' | cut -d':' -f1)
-redirectIp=$(cat redirect)
-
-echo $ip , $targetIp , $redirectIp
-
-if [[ $targetIp == $ip ]]; then
-	echo "not target server"
-	exit
-fi
-
-if [[ $serverName =~ 'ogate' ]]; then
-	cd /root/open-proxy
-	#./redirect.sh $redirectIp
-fi
-
-
