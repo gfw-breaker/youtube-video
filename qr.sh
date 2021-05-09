@@ -17,7 +17,9 @@ ts=$(date "+%m%d%H%m")
 while read line ; do
 	title=$(echo $line | cut -d',' -f1)
 	folder=$(echo $line | cut -d',' -f3)
-	url="http://$ip:port/$folder/?t=$ts"
+	url="http://$ip:$port/$folder/?t=$ts"
+	path=$videoHome/$folder/qr.png
+	qrencode -o $path -s8 $url
 	echo $url
 done < channels.csv
 
