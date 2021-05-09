@@ -70,5 +70,5 @@ cat >> $yt <<EOF
 EOF
 done < channels.csv
 
-echo "<br/><br/><br/><br/>" >> $yt
+echo "<br/><br/>" >> $yt
 

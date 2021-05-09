@@ -167,6 +167,7 @@ done
 
 # tv page
 /root/youtube-video/tv.sh
-/root/youtube-video/rank.sh
+#/root/youtube-video/rank.sh
+/root/youtube-video/qr.sh
 
 
