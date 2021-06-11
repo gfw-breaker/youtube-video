@@ -147,7 +147,7 @@ EOF
 
 	cat >> $index_page <<EOF
 <span id='anchor'></span>
-<div> 代理网站：<a href='http://$ip:8808/gb/'>新唐人电视台 </a>&nbsp; |&nbsp; <a href='/radio.html'>希望之声广播</a>&nbsp; |&nbsp; <a href='http://$ip:10080/gb/'>大纪元新闻网</a>&nbsp; |&nbsp; <a href='/youtube.html'>YouTube频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/news/'>热点视频</a> </div>
+<div> 代理网站：<a href='http://$ip:8808/gb/'>新唐人电视台 </a>&nbsp; |&nbsp; <a href='/radio.html'>希望之声广播</a>&nbsp; |&nbsp; <a href='http://$ip:85/gb/'>大纪元新闻网</a>&nbsp; |&nbsp; <a href='/youtube.html'>YouTube频道</a>&nbsp; |&nbsp; <a href='http://$ip:10000/videos/news/'>热点视频</a> </div>
 <div><a href='./qr.png?t=$ts'>💥 点击分享二维码给亲朋好友，让更多人明白真相 </a></div>
 <!--
 <div>服务器故障导致视频无法播放，正在紧急修复，请耐心等待</div>
